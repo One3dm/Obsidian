@@ -1,1 +1,1 @@
-[[Модель OSI]] - Open Systems Interconnection. !
+[[Модель OSI]] - Open Systems Interconnection.
