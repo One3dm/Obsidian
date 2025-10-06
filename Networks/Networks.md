@@ -19,7 +19,7 @@ Address Resolution Protocol - что это?
 L2 взаимодействие
 STP (Spanning Tree Protocol) - что это и как работает?
 DHCP (Dynamic Host Configuration Protocol) - что это и как работает?
-DNS сервер - что это и как работает?
+[[DNS]]
 Статическая маршрутизация
 Динамическая маршрутизация
 Протокол динамической маршрутизации OSPF (Open Shortest Path First)
