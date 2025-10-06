@@ -27,6 +27,7 @@ DHCP (Dynamic Host Configuration Protocol) - что это и как работ�
 Route Redistribution
 Листы контроля доступа (ACL)
 Протокол динамической маршрутизации BGP (Border Gateway Protocol)
+[[NAT]]
 ________________________________________________________________________
 Paths: [[Core]]
 Tags: #Networks 
