@@ -12,7 +12,7 @@
 [[Что такое ip адрес]]
 [[TCP и UDP]]
 [[Ethernet]]
-Что такое инкапсуляция данных в сети?
+[[Инкапсуляция данных]]
 Разбиение сети на подсети: VLSM
 Address Resolution Protocol - что это?
 Про VLAN (Virtual Local Area Network)
