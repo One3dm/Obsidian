@@ -13,7 +13,7 @@
 [[TCP и UDP]]
 [[Ethernet]]
 [[Инкапсуляция данных]]
-Разбиение сети на подсети: VLSM
+[[VLSM]]
 Address Resolution Protocol - что это?
 Про VLAN (Virtual Local Area Network)
 L2 взаимодействие
