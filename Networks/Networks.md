@@ -14,8 +14,8 @@
 [[Ethernet]]
 [[Инкапсуляция данных]]
 [[VLSM]]
-Address Resolution Protocol - что это?
-Про VLAN (Virtual Local Area Network)
+[[ARP]]
+VLAN
 L2 взаимодействие
 STP (Spanning Tree Protocol) - что это и как работает?
 DHCP (Dynamic Host Configuration Protocol) - что это и как работает?
