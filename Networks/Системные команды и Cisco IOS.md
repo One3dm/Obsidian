@@ -59,7 +59,9 @@ Switch# c
 
 **Неполная команда (Incomplete command)** – не все необходимые ключевые слова или аргументы были введены.
 
+```cli
 Switch# clock set
+```
 % Incomplete command.
 
 ---
