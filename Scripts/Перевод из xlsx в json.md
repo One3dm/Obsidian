@@ -7,7 +7,10 @@ import json
 def excel_to_json(excel_file, json_file):  
     """  
     Функция читает данные из Excel файла и сохраняет их в формате JSON.  
-    :param excel_file: Путь к файлу Excel (.xlsx)    :param json_file: Путь к файлу, в который будут сохранены данные в формате JSON    """    try:  
+    :param excel_file: Путь к файлу Excel (.xlsx)    
+    :param json_file: Путь к файлу, в который будут сохранены данные в формате JSON    
+    """    
+    try:  
         # Читаем данные из Excel файла  
         df = pd.read_excel(excel_file)  
   
