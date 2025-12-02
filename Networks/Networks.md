@@ -22,12 +22,12 @@ DHCP (Dynamic Host Configuration Protocol) - что это и как работ�
 [[DNS]]
 Статическая маршрутизация
 Динамическая маршрутизация
-Протокол динамической маршрутизации OSPF (Open Shortest Path First)
-Протокол динамической маршрутизации EIGRIP (Enhanced Interior Gateway Routing Protocol)
+OSPF
+EIGRIP
 Route Redistribution
-Листы контроля доступа (ACL)
+ACL
 [[QoS]]
-Протокол динамической маршрутизации BGP (Border Gateway Protocol)
+BGP
 [[NAT]]
 [[VPN]]
 [[IPv6]]
