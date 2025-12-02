@@ -15,7 +15,7 @@
 [[Инкапсуляция данных]]
 [[VLSM]]
 [[ARP]]
-VLAN
+[[VLAN]]
 L2 взаимодействие
 STP (Spanning Tree Protocol) - что это и как работает?
 DHCP (Dynamic Host Configuration Protocol) - что это и как работает?
