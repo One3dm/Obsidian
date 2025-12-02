@@ -20,6 +20,7 @@ L2 взаимодействие
 STP (Spanning Tree Protocol) - что это и как работает?
 DHCP (Dynamic Host Configuration Protocol) - что это и как работает?
 [[DNS]]
+[[ICMP]]
 Статическая маршрутизация
 Динамическая маршрутизация
 OSPF
