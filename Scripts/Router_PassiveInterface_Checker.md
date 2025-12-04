@@ -1,3 +1,5 @@
+Скрипт который подключается к оборудованию через терминальный сервер и выполняет команду sh run. После чего парсит вывод с помощью библиотеки CiscoConfParse. В пропаршеном конфиге ищет блоки маршрутизации router и в этих блоках ищет строку passive-interface default.
+
 ```python
 import json
 import os
@@ -197,6 +199,39 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+
+File= devices_config.json for sript
+```json
+[
+{
+    "common_settings": {
+        "username": "login",
+        "password": "password",
+        "global_delay_factor": 5,
+        "fast_cli": false,
+        "conn_timeout": 30,
+        "auth_timeout": 20
+    },
+    "common_commands": [
+        "sh run"
+    ],
+    "devices": [
+        {
+            "device_type": "cisco_ios",
+            "host": "x.x.x.x",
+            "session_log": "session_hostname1.log"
+        },
+        {
+            "device_type": "cisco_ios",
+            "host": "x.x.x.x",
+            "session_log": "session_hostname2.log"
+        }
+    ]
+}
+]
+```
+
 
 ________________________________________________________________________
 Paths: [[Scripts]]
