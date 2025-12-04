@@ -232,7 +232,13 @@ File= devices_config.json for sript
 ]
 ```
 
-
+File= credentials.json for sript
+```json
+{
+    "username": "login",
+    "password": "password"
+}
+```
 ________________________________________________________________________
 Paths: [[Scripts]]
 Tags: #Scripts   
