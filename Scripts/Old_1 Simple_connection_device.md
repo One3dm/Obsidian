@@ -49,6 +49,7 @@ with open('Вывод из Пайтона.json', 'w', encoding='utf-8') as f:
     json.dump(new_output, f, indent=4, ensure_ascii=False)
 ```
 
+Также использовались статьи [Автоматизация сетевого оборудования на Python. Работа через jump-host / Хабр](https://habr.com/ru/companies/rostelecom/articles/823282/)
 
 ________________________________________________________________________
 Paths: [[Scripts]]

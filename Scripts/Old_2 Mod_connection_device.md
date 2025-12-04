@@ -132,7 +132,6 @@ File= devices_config.json for sript
     }
 ]
 ```
-Также использовались статьи [Автоматизация сетевого оборудования на Python. Работа через jump-host / Хабр](https://habr.com/ru/companies/rostelecom/articles/823282/)
 
 ________________________________________________________________________
 Paths: [[Scripts]]
