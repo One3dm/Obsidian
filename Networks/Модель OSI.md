@@ -1,6 +1,8 @@
 [[Модель OSI]] - Open Systems Interconnection.
 
-![[Модель OSI.jpg]]
+![[OSI.png]]
+
+![[TCPip.png]]
 ________________________________________________________________________
 Paths: [[Networks]]
 Tags: #Networks 
