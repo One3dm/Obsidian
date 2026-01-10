@@ -6,5 +6,5 @@ TCP/IP  model
 
 
 ________________________________________________________________________
-Paths: [[Networks]]
+Paths: [[🔴Networks]]
 Tags: #Networks 
