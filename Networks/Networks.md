@@ -1,7 +1,7 @@
 [[OSI]]
 [[Hub. Switch. Router]]
 [[LAN vs WAN]]
-[[Витая пара и как ее обжать]]
+[[Crimping Network Cable]]
 [[Telnet и SSH]]
 [[Подключение к оборудованию cisco]]
 [[Интерфейс командной строки Cisco IOS]]
