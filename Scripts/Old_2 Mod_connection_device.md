@@ -8,9 +8,9 @@ from netmiko import ConnectHandler
 # Конфигурация для подключения к терминальному серверу (jump host)  
 jump_host = {  
     'device_type': 'terminal_server',  
-    'host': 'x.x.x.x',  
-    'username': 'логин',  
-    'password': 'пароль',  
+    'host': '192.0.2.1',          # RFC 5737 TEST-NET-1
+    'username': 'jump_admin',     
+    'password': 'dummy_jump_pass', 
     'port': 22,  
     'session_log': 'session.log',  
     'timeout': 10  # Установите таймаут для всех операций  
@@ -96,9 +96,9 @@ File= devices_config.json for sript
 [
     {
         "device_type": "cisco_ios",
-        "host": "x.x.x.x",
-        "username": "логин",
-        "password": "пароль",
+	    "host": "192.0.2.101",        
+	    "username": "admin",
+	    "password": "cisco123",       
         "session_log": "session_1.log",
         "commands": [
             "sh ip int brief",
@@ -108,9 +108,9 @@ File= devices_config.json for sript
     },
     {
         "device_type": "cisco_ios",
-        "host": "x.x.x.x",
-        "username": "логин",
-        "password": "пароль",
+	    "host": "192.0.2.101",        
+	    "username": "admin",
+	    "password": "cisco123", 
         "session_log": "session_2.log",
         "commands": [
             "sh ip int brief",
@@ -120,9 +120,9 @@ File= devices_config.json for sript
     },
     {
         "device_type": "cisco_ios",
-        "host": "x.x.x.x",
-        "username": "логин",
-        "password": "пароль",
+	    "host": "192.0.2.101",        
+	    "username": "admin",
+	    "password": "cisco123", 
         "session_log": "session_3.log",
         "commands": [
             "sh ip int brief",
