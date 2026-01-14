@@ -72,3 +72,7 @@ Informational
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=flat-square&logo=telegram)](https://t.me/Fronz3dm)
 [![Habr](https://img.shields.io/badge/-Habr-77A2B6?style=flat-square&logo=habr&logoColor=white)](https://career.habr.com/fronz)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:stepashka9594@gmail.com)
+
+________________________________________________________________________
+Paths: [[Core]]
+Tags: #README
