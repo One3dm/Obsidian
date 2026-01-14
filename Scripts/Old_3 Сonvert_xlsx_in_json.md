@@ -15,7 +15,7 @@ def excel_to_json(excel_file, json_file):
         df = pd.read_excel(excel_file)  
   
         # Проверяем, что необходимые столбцы существуют  
-        required_columns = ["hostname", "device_ip"]  
+        required_columns = ["device_name", "management_ip"]  
         for column in required_columns:  
             if column not in df.columns:  
                 raise ValueError(f"Столбец '{column}' отсутствует в Excel файле.")  
@@ -42,7 +42,7 @@ def excel_to_json(excel_file, json_file):
 # Пример использования  
 if __name__ == "__main__":  
     # Путь к файлу Excel  
-    excel_file = "unloading_SZ.xlsx"  
+    excel_file = "network_inventory_sample.xlsx"  
     # Путь для сохранения JSON файла  
     json_file = "devices_config.json"  
   
