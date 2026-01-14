@@ -65,6 +65,8 @@ I am a results-driven Network Engineer with expertise in designing, securing, an
 ## 📫 Connect With Me
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pavel-stepanov-33471b3a5)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:stepashka9594@gmail.com)
+[![Telegram](https://img.shields.io/badge/-Telegram-blue?style=flat-square&logo=telegram)](https://t.me/Fronz3dm)
+[![Habr](https://img.shields.io/badge/-Habr-77A2B6?style=flat-square&logo=habr&logoColor=white)](https://career.habr.com/fronz)
 
 *Thank you for visiting my professional knowledge base. I welcome connections and discussions about network engineering and automation.*
 ________________________________________________________________________
