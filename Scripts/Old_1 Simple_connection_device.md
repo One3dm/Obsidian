@@ -1,6 +1,8 @@
 Простой скрипт для подключения к сетевому оборудованию через терминальный сервер. Скрипт после подключения выполняет заданные команды и сохраняет их  в .json. 
 
 ```python
+#DISCLAIMER: This is a sanitized example for portfolio purposes. All sensitive data (IPs, hostnames, credentials) have been replaced with placeholders. Real-world scripts must use secure credential management (e.g., environment variables, vaults).
+"""
 # Импорт библиотек
 import json
 import time
