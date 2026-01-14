@@ -206,8 +206,8 @@ File= devices_config.json for sript
 [
 {
     "common_settings": {
-        "username": "login",
-        "password": "password",
+        "username": "admin",
+        "password": "cisco123",
         "global_delay_factor": 5,
         "fast_cli": false,
         "conn_timeout": 30,
@@ -219,12 +219,12 @@ File= devices_config.json for sript
     "devices": [
         {
             "device_type": "cisco_ios",
-            "host": "x.x.x.x",
+            "host": "192.0.2.1",
             "session_log": "session_hostname1.log"
         },
         {
             "device_type": "cisco_ios",
-            "host": "x.x.x.x",
+            "host": "192.0.2.2",
             "session_log": "session_hostname2.log"
         }
     ]
@@ -235,8 +235,8 @@ File= devices_config.json for sript
 File= credentials.json for sript
 ```json
 {
-    "username": "login",
-    "password": "password"
+    "username": "admin",
+    "password": "cisco123"
 }
 ```
 ________________________________________________________________________
