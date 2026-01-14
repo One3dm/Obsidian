@@ -1,6 +1,7 @@
 Перевод импортированного excel файла из IMS в JSON формат для чтения скриптом по подключению к оборудованию.
 
 ```python
+#DISCLAIMER: This is a sanitized example for portfolio purposes. All sensitive data (IPs, hostnames, credentials) have been replaced with placeholders. Real-world scripts must use secure credential management (e.g., environment variables, vaults).
 import pandas as pd  
 import json  
   

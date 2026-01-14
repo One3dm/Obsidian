@@ -1,6 +1,7 @@
 Скрипт который подключается к оборудованию через терминальный сервер и выполняет команду sh run. После чего парсит вывод с помощью библиотеки CiscoConfParse. В пропаршеном конфиге ищет блоки маршрутизации router и в этих блоках ищет строку passive-interface default.
 
 ```python
+#DISCLAIMER: This is a sanitized example for portfolio purposes. All sensitive data (IPs, hostnames, credentials) have been replaced with placeholders. Real-world scripts must use secure credential management (e.g., environment variables, vaults).
 import json
 import os
 import time
