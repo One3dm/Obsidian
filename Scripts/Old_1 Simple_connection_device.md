@@ -2,7 +2,6 @@
 
 ```python
 #DISCLAIMER: This is a sanitized example for portfolio purposes. All sensitive data (IPs, hostnames, credentials) have been replaced with placeholders. Real-world scripts must use secure credential management (e.g., environment variables, vaults).
-"""
 # Импорт библиотек
 import json
 import time
@@ -12,12 +11,12 @@ from netmiko import redispatch
 
 # Определение параметров подключения к устройству
 device = {
-    'device_type': 'terminal_server',  # Тип устройства (jump server)
-    'host': 'x.x.x.x',                # IP-адрес устройства
-    'username': 'Логин',             # Имя пользователя
-    'password': 'Пароль',            # Пароль
-    'port': 22,                      # Порт для подключения (SSH)
-    'session_log': 'session.log'     # Путь к файлу лога сессии
+    'device_type': 'terminal_server',
+    'host': '192.0.2.1',               # RFC 5737 TEST-NET-1 address
+    'username': 'dummy_username',      # Placeholder username
+    'password': 'dummy_password_123',  # Placeholder password
+    'port': 22,
+    'session_log': '/tmp/netmiko_session.log'  # Упрощённый путь
 }
 
 # Создание сессии подключения
@@ -34,7 +33,7 @@ output = net_connect.read_channel()
 
 # Проверка на запрос пароля и его ввод
 if 'Password:' in output:
-    net_connect.write_channel('Transiver8754\n')
+    net_connect.write_channel('dummy_ssh_password\n')  # Заглушка
 
 # Вывод промта роутера
 print("Router Prompt:{}".format(net_connect.find_prompt()))
