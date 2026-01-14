@@ -41,7 +41,7 @@ def load_device_config(config_file):
 # Главная функция
 def main():
     # Путь к файлу с логином и паролем
-    credentials_file = r"C:\Users\login\Desktop\Scripts\credentials.json"
+    credentials_file = r"credentials.json"
 
     # Проверка файла credentials.json
     if not os.path.exists(credentials_file):
@@ -57,9 +57,9 @@ def main():
     # Конфигурация для подключения к терминальному серверу
     jump_host = {
         'device_type': 'terminal_server',
-        'host': 'x.x.x.x',
-        'username': username,
-        'password': password,
+		'host': '192.0.2.1',          # RFC 5737 TEST-NET-1
+	    'username': 'jump_admin',     
+	    'password': 'dummy_jump_pass', 
         'port': 22,
         'session_log': 'session.log',
         'timeout': 10
