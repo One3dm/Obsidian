@@ -1,6 +1,6 @@
 ## 🌐 Network Engineer | Network Automation
 
-Hello! I'm a **Senior Network Engineer** with over 6 years of experience in enterprise and carrier networks. This repository serves as my **professional knowledge base and portfolio**, where I document solutions and showcase practical automation scripts developed to solve real network operations challenges. Your feedback is welcome!
+Hello! I'm a **Network Engineer** with over 6 years of experience in enterprise and carrier networks. This repository serves as my **professional knowledge base and portfolio**, where I document solutions and showcase practical automation scripts developed to solve real network operations challenges. Your feedback is welcome!
 
 # Structure
 
