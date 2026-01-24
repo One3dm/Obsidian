@@ -2,7 +2,7 @@
 [[Hub. Switch. Router]]
 [[LAN vs WAN]]
 [[Crimping Network Cable]]
-[[Подключение к оборудованию cisco]]
+[[Connection to Cisco Device]]
 [[Интерфейс командной строки Cisco IOS]]
 [[Системные команды и Cisco IOS]]
 [[Режимы передачи данных в сетях]]
