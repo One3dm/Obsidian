@@ -2,7 +2,6 @@
 [[Hub. Switch. Router]]
 [[LAN vs WAN]]
 [[Crimping Network Cable]]
-[[Telnet и SSH]]
 [[Подключение к оборудованию cisco]]
 [[Интерфейс командной строки Cisco IOS]]
 [[Системные команды и Cisco IOS]]
@@ -16,6 +15,7 @@
 [[VLSM]]
 [[ARP]]
 [[VLAN]]
+[[Telnet и SSH]]
 L2 взаимодействие
 STP
 [[DHCP]]
