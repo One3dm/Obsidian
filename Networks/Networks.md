@@ -16,7 +16,7 @@ Unicast, Broadcast, Multicast
 [[TCP и UDP]]
 [[VLAN]]
 [[Telnet и SSH]]
-Port-Security
+[[Port-Security]]
 L2 взаимодействие
 STP
 [[DHCP]]
@@ -25,10 +25,9 @@ STP
 Статическая маршрутизация
 Динамическая маршрутизация
 OSPF
-EIGRIP
+EIGRP
 Route Redistribution
 ACL
-[[Port-Security]]
 [[QoS]]
 BGP
 [[NAT]]
