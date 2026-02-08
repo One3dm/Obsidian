@@ -15,25 +15,25 @@ Unicast, Broadcast, Multicast
 [[Ethernet]]
 [[TCP и UDP]]
 [[VLAN]]
-[[Telnet и SSH]]
-[[Port-Security]]
 L2 взаимодействие
 STP
+[[Port-Security]]
 [[DHCP]]
 [[DNS]]
 [[ICMP]]
+[[Telnet и SSH]]
 Статическая маршрутизация
 Динамическая маршрутизация
 OSPF
 EIGRP
 Route Redistribution
 ACL
-[[QoS]]
-BGP
 [[NAT]]
-[[VPN]]
-[[IPv6]]
+[[QoS]]
+[[VPN
+[[IPv6]]]]
 [[D(D)oS]]
+BGP
 [[Сегментация и архитектура сети]]
 ________________________________________________________________________
 Paths: [[Core]]
