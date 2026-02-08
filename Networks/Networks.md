@@ -26,14 +26,16 @@ STP
 Динамическая маршрутизация
 OSPF
 EIGRP
+BGP (AS, eBGP, IBGP, атрибуты)
 Route Redistribution
 ACL
 [[NAT]]
 [[QoS]]
-[[VPN
+[[VPN]]
 [[IPv6]]]]
 [[D(D)oS]]
-BGP
+MP-BGP
+VRF-lite
 [[Сегментация и архитектура сети]]
 ________________________________________________________________________
 Paths: [[Core]]
