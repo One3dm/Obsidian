@@ -9,10 +9,11 @@
 [[Что такое mac адрес]]
 [[IPv4]]
 [[VLSM]]
+Unicast, Broadcast, Multicast
+[[ARP]]
 [[Инкапсуляция данных]]
 [[Ethernet]]
 [[TCP и UDP]]
-[[ARP]]
 [[VLAN]]
 [[Telnet и SSH]]
 L2 взаимодействие
