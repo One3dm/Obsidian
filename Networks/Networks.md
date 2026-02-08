@@ -1,6 +1,6 @@
 [[OSI]]
 [[Hub. Switch. Router]]
-[[Режимы передачи данных в сетях]]
+[[Duplex Modes]]
 [[LAN vs WAN]]
 [[Crimping Network Cable]]
 [[Connection to Cisco Device]]
