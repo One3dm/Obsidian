@@ -3,22 +3,17 @@
 **[Installing Python](https://realpython.com/installing-python/)** — подробное руководство для Windows, macOS и Linux.
 
 **Windows**
-
 **Современная рекомендация:** устанавливать Python из Microsoft Store.
 
 Если устанавливаете с python.org
 Обязательно отметьте опцию **"Add python.exe to PATH"** при установке.
-У этого подхода есть нюансы безопасности — подробности по ссылке в письме.
+У этого подхода есть нюансы безопасности.
 
-
----
-
-### macOS
-
+**macOS**
 **Способ:** официальный установщик с python.org
 
-> [!CAUTION] Частая проблема
-> В конце установки **нужно запустить (двойным кликом)** установку SSL-сертификатов — специальный файл в папке установки Python.
+Частая проблема
+В конце установки **нужно запустить (двойным кликом)** установку SSL-сертификатов.
 
 **Дополнительный ресурс:**
 - [DataQuest: Installing Python on Mac](https://www.dataquest.io/blog/installing-python-on-mac/) — смотрите раздел "Install Python 3 with the Official Installer"
