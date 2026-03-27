@@ -13,28 +13,25 @@
 ## macOS / Linux
 
 ```bash
-# Проверить версию Python
-which python3.11
+# Создать виртуальное окружение 
+python3 -m venv venv 
 
-# Создать виртуальное окружение
-python3.11 -m venv py311_venv
+# Активировать 
+source venv/bin/activate 
 
-# Активировать
-source py311_venv/bin/activate
-
-# После активации в терминале появляется (py311_venv)
+# После активации в терминале появляется (venv)
 ```
 
 ## Windows
 
 ```cmd
 # Создать виртуальное окружение
-py -m venv py311_venv
+python -m venv venv
 
 # Активировать
-py311_venv\Scripts\activate
+venv\Scripts\activate
 
-# После активации в терминале появляется (py311_venv)
+# После активации в терминале появляется (venv)
 ```
 
 **Проверка**
