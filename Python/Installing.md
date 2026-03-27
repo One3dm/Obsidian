@@ -6,10 +6,9 @@
 
 **Современная рекомендация:** устанавливать Python из Microsoft Store.
 
-> [!WARNING] Если устанавливаете с python.org
-> Обязательно отметьте опцию **"Add python.exe to PATH"** при установке.
-> 
-> ⚠️ У этого подхода есть нюансы безопасности — подробности по ссылке в письме.
+ Если устанавливаете с python.org
+Обязательно отметьте опцию **"Add python.exe to PATH"** при установке.
+У этого подхода есть нюансы безопасности — подробности по ссылке в письме.
 
 **Дополнительный ресурс:**
 - [DigitalOcean: Install Python on Windows 10](https://www.digitalocean.com/community/tutorials/install-python-windows-10)
