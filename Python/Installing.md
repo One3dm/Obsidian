@@ -1,11 +1,8 @@
 **Установка Python**
-Основной ресурс
 Рекомендуется использовать статью на Real Python
+**[Installing Python](https://realpython.com/installing-python/)** — подробное руководство для Windows, macOS и Linux.
 
- **[Installing Python](https://realpython.com/installing-python/)** — подробное руководство для Windows, macOS и Linux.
-## По платформам
-
-### Windows
+**Windows**
 
 **Современная рекомендация:** устанавливать Python из Microsoft Store.
 
