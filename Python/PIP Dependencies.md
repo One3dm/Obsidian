@@ -22,16 +22,16 @@ python -m pip install --upgrade pip
 
 ## Основные команды PIP
 
-| Команда | Назначение |
-|---------|------------|
-| `pip install <package>` | Установить пакет |
-| `pip install <package>==<version>` | Установить конкретную версию |
-| `pip install -r requirements.txt` | **Установить все пакеты из файла** |
-| `pip list` | Показать установленные пакеты |
-| `pip uninstall <package>` | Удалить пакет |
-| `pip freeze > requirements.txt` | **Сохранить зависимости в файл** |
-| `pip show <package>` | **Показать информацию о пакете** |
-| `pip install --upgrade <package>` | Обновить пакет до последней версии |
+| Команда                            | Назначение                         |
+| ---------------------------------- | ---------------------------------- |
+| `pip install <package>`            | Установить пакет                   |
+| `pip install <package>==<version>` | Установить конкретную версию       |
+| `pip install -r requirements.txt`  | Установить все пакеты из файла     |
+| `pip list`                         | Показать установленные пакеты      |
+| `pip uninstall <package>`          | Удалить пакет                      |
+| `pip freeze > requirements.txt`    | **Сохранить зависимости в файл**   |
+| `pip show <package>`               | **Показать информацию о пакете**   |
+| `pip install --upgrade <package>`  | Обновить пакет до последней версии |
 
 **Проверка установленных пакетов:**
 ```bash
