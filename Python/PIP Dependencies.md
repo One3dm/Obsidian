@@ -1,8 +1,10 @@
 PIP — менеджер пакетов Python. Устанавливает и управляет сторонними библиотеками.
 
 **Обновление самого PIP**
+- pip устанавливается автоматически при создании venv 
+- Не обновляйте pip без необходимости — это может вызвать проблемы 
 
-Перед установкой зависимостей рекомендует обновить PIP до последней версии.
+ Если при установке пакета возникает ошибка старой версии pip, тогда обновите:
 ```bash
 # Стандартный способ pip install 
 --upgrade pip 
@@ -16,23 +18,7 @@ python -m pip install --upgrade pip
 pip --version
 ```
 
-### Пример выполнения:
-
-```
-[py311_venv] ktbyers@pydev2 ~/VENV
-$ pip install pip==22.3.1
-Collecting pip==22.3.1
-  Using cached pip-22.3.1-py3-none-any.whl (2.1 MB)
-Installing collected packages: pip
-  Attempting uninstall: pip
-    Found existing installation: pip 22.3
-    Uninstalling pip-22.3:
-    Successfully uninstalled pip-22.3
-Successfully installed pip-22.3.1
-```
-
-### Проверка версии:
-
+Проверка версии:
 ```bash
 pip list
 ```
@@ -44,18 +30,7 @@ pip        22.3.1
 setuptools 65.5.0
 ```
 
----
-
-## Установка зависимостей курса
-
-После обновления PIP устанавливаются необходимые для курса пакеты.
-
-> [!NOTE]
-> Команды для установки зависимостей будут в следующих материалах курса.
-
----
-
-## 📌 Основные команды PIP
+ **Основные команды PIP**
 
 | Команда | Назначение |
 |---------|------------|
