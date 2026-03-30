@@ -26,7 +26,7 @@ var9 = 42      # ✅
 9var = 42      # ❌ SyntaxError
 ```
 
-### 2. `PascalCase` — классы
+**PascalCase — классы**
 ```python
 class NetworkDevice:
     pass
