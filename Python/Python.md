@@ -5,6 +5,8 @@
 [[REPL and Assignment]]
 [[Python Naming Conventions]]
 [[Print and Input]]
+[[Python Characteristics]]
+
 
 ________________________________________________________________________
 Paths: [[Core]]
