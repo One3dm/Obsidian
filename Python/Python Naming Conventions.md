@@ -47,6 +47,7 @@ API_ENDPOINT = "https://api.example.com"
 class Device:
     def __init__(self, ip):
         self.ip = ip    # self ссылается на текущий объект
+
 ```
 
 **_ (одиночное подчёркивание) — «мусорная» переменная**
