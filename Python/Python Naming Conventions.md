@@ -19,6 +19,7 @@ my_ip_address = "10.220.107.99"
 def get_device_name():
     return "router1"
 ```
+
 Можно использовать цифры, но **не в начале**:
 ```python
 var9 = 42      # ✅
