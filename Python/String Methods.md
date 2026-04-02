@@ -15,12 +15,9 @@ my_var.upper()      # 'SOME STRING'
 > my_var.upper   # <function str.upper()>
 > ```
 
----
-
-## Исходная строка не изменяется
+Исходная строка не изменяется
 
 Методы возвращают **новую строку**, не меняя оригинал:
-
 ```python
 my_var = "some string"
 my_var.upper()      # 'SOME STRING'
