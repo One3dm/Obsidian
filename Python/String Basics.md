@@ -90,7 +90,7 @@ status = f"Uptime: {uptime} days ({uptime/365:.1f} years)"
 network = f"{ip}/24"  # "192.168.1.1/24"
 ```
 
-## Полезные методы строк (базовые)
+Полезные методы строк (базовые)
 ```python
 text = "  router-sw01  "
 
