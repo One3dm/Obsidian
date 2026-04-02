@@ -10,6 +10,7 @@
 [[Comments, Dir, and Help]]
 [[String Basics]]
 [[String Methods]]
+[[Chaining String Methods]]
 
 ________________________________________________________________________
 Paths: [[Core]]
