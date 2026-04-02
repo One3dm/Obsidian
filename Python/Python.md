@@ -9,7 +9,7 @@
 [[Executing your first Python script]]
 [[Comments, Dir, and Help]]
 [[String Basics]]
-
+[[String Methods]]
 
 ________________________________________________________________________
 Paths: [[Core]]
