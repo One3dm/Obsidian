@@ -65,8 +65,7 @@ print(win_path)
 # c:\windows\new_dir\test\applications
 ```
 
-### Когда использовать raw-строки:
-
+Когда использовать raw-строки:
 ```python
 # 1. Пути в Windows
 windows_path = r"C:\Users\Admin\Documents\network_configs"
@@ -86,8 +85,7 @@ regular = "Line1\nLine2\tTab"      # Будет: Line1 (новая строка)
 raw = r"Line1\nLine2\tTab"         # Будет: Line1\nLine2\tTab
 ```
 
-### Важно: raw-строки не экранируют кавычки:
-
+Важно: raw-строки не экранируют кавычки:
 ```python
 # ❌ Не работает
 # text = r"Это raw-строка с \"кавычками\""  # SyntaxError
@@ -97,11 +95,9 @@ text = r"Это raw-строка без проблем"  # ОК
 text2 = r'Можно и с "кавычками" внутри'  # ОК
 ```
 
----
+3. Конкатенация строк (объединение)
 
-## 3. Конкатенация строк (объединение)
-
-### Оператор `+`
+Оператор `+`
 
 ```python
 city = "San Francisco"
@@ -110,8 +106,7 @@ location = city + ", " + state
 print(location)   # 'San Francisco, CA'
 ```
 
-### Оператор `+=` (добавление к существующей строке)
-
+Оператор `+=` (добавление к существующей строке)
 ```python
 data = "line1 of some output\n"
 data += "line2 of some output\n"
@@ -120,8 +115,7 @@ print(data)
 # line2 of some output
 ```
 
-### Практический пример построения конфигурации:
-
+Практический пример построения конфигурации:
 ```python
 # Построение конфигурации коммутатора по частям
 config = "!\n"
