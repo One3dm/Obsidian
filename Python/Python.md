@@ -11,6 +11,9 @@
 [[String Basics]]
 [[String Methods]]
 [[Chaining String Methods]]
+[[Embedding Variables in Strings]]
+
+
 
 ________________________________________________________________________
 Paths: [[Core]]
