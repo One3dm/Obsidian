@@ -11,7 +11,7 @@
 [[String Basics]]
 [[String Methods]]
 [[Chaining String Methods]]
-[[What is f-string]]
+[[f-string]]
 [[Embedding Variables in Strings]]
 
 
