@@ -4,7 +4,7 @@
 [[LAN vs WAN]]
 [[Crimping Network Cable]]
 [[Connection to Cisco Device]]
-[[Интерфейс командной строки Cisco IOS]]
+[[Cisco IOS]]
 [[Системные команды и Cisco IOS]]
 [[Что такое mac адрес]]
 [[IPv4]]
