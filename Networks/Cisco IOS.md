@@ -30,9 +30,7 @@ Cisco IOS (Internetwork Operating System)
 - **GD** — General Deployment (стабильная, рекомендована)
 - **MD** — Maintenance Deployment (исправления и поддержка)
 
----
-
-### 🎛️ Feature Sets (наборы функций)
+Feature Sets (наборы функций)
 
 | Набор | Что добавляет |
 |-------|---------------|
@@ -70,135 +68,9 @@ Cisco IOS (Internetwork Operating System)
 > - **DRAM:** 512 МБ / **Flash:** 128 МБ
 > - **Файл образа:** `c3560cx-universalk9-mz.152-4.E4.bin`
 
-![[image.png]]
+![[IOS.png]]
 
----
 
-## 📄 Статья 2: **Cisco IOS CLI — команды, горячие клавиши, troubleshooting**
-
-**Tags:** #Networks #Cisco #CLI
-
----
-
-### ⚠️ Ошибки ввода команд
-
-| Ошибка | Что значит | Пример |
-|--------|------------|--------|
-| **Ambiguous command** | Слишком мало символов | `c` (непонятно: clock? crypto?) |
-| **Incomplete command** | Не хватает аргументов | `clock set` |
-| **Invalid input** | Неправильная команда (с указателем `^`) | `clok set ...` |
-
----
-
-### 🔥 Горячие клавиши
-
-| Клавиша | Действие |
-|---------|----------|
-| `↑` / `↓` | История команд |
-| `Tab` | Автодополнение |
-| `?` | Справка |
-| `Ctrl + A` | В начало строки |
-| `Ctrl + E` | В конец строки |
-| `Ctrl + Z` | Выход из режима конфигурации → привилегированный режим (`#`) |
-| `Ctrl + C` | Прервать текущую команду |
-| `Ctrl + Shift + 6` | Прервать `ping` / `traceroute` |
-| `Space` | Следующая страница вывода (`--More--`) |
-| `Enter` | Следующая строка |
-
----
-
-### 📋 Основные команды `show`
-
-| Команда | Что показывает |
-|---------|----------------|
-| `show version` | Версия IOS, модель, uptime, register |
-| `show running-config` | Текущая конфигурация (в RAM) |
-| `show startup-config` | Сохранённая конфигурация (в NVRAM) |
-| `show interfaces` | Статус всех интерфейсов, ошибки, MTU |
-| `show ip interface brief` | Краткий статус IP на интерфейсах |
-| `show ip route` | Таблица маршрутизации |
-| `show arp` | ARP-таблица |
-| `show mac-address-table` | Таблица MAC-адресов (коммутатор) |
-| `show vlan` | VLAN’ы |
-| `show cdp neighbors` | Соседние Cisco-устройства (CDP) |
-| `show spanning-tree` | STP |
-| `show ip dhcp binding` | Выданные DHCP-адреса |
-| `show ip nat translations` | Таблица NAT |
-| `show history` | История введённых команд |
-| `show flash` | Содержимое Flash-памяти |
-| `show inventory` | UDI (PID, VID, серийный номер) |
-| `show processes` | Активные процессы |
-| `show power` | Информация о питании |
-| `show hardware` | Информация о железе |
-
----
-
-### 🔍 Фильтрация вывода (pipe `|`)
-
-```cisco
-Switch# show running-config | include ip dhcp pool
-```
-
-| Фильтр | Действие |
-|--------|----------|
-| `include` | Показать строки, где есть текст |
-| `exclude` | Показать строки, где НЕТ текста |
-| `begin` | Показать всё, начиная со строки с текстом |
-| `section` | Показать весь раздел с текстом в заголовке |
-
----
-
-### ✂️ Сокращение команд
-
-```cisco
-Switch# show interfaces fastethernet 0/1
-Switch# sh int fa 0/1          ✅ тоже работает
-```
-
----
-
-### 🧠 Важно
-
-- Команды могут отличаться в зависимости от **модели устройства** и **версии IOS**.
-- При выводе `--More--`:
-    - `Space` — следующая страница
-    - `Enter` — следующая строка
-    - любая другая клавиша — выход
-
----
-
-### 🖼️ Шпаргалка: иерархия режимов и команд
-
-> [!tip] Наглядная схема для запоминания
-> 
-> **Пользовательский режим (User EXEC)** — `>`  
-> → `ping`, `show (limited)`, `enable`
-> 
-> **Привилегированный режим (Privileged EXEC)** — `#`  
-> → `debug`, `reload`, все `show`
-> 
-> **Глобальная конфигурация (Global Config)** — `(config)#`  
-> → `hostname`, `enable secret`, `ip route`, `interface`
-> 
-> **Режим интерфейса (Interface)** — `(config-if)#`  
-> → `ip address`, `shutdown`, `encapsulation`
-> 
-> **Режим маршрутизации (Routing)** — `(config-router)#`  
-> → `network`, `version`, `autosummary` (RIP, OSPF, EIGRP)
-
-![[Цифровая инфографика команд маршрутизатора Cisco.png]]
-
----
-
-## ✅ Где и что вставили:
-
-| Статья | Картинка | Место вставки |
-|--------|----------|---------------|
-| **Cisco IOS** | Release notes (image.png) | В конец статьи, перед разделом "Способы управления" или после Feature Sets |
-| **Cisco IOS CLI** | Инфографика с командами | В конец статьи, как шпаргалка |
-
-Теперь статьи **полные, наглядные и готовые к публикации**. Хочешь, могу ещё сжать первую статью (она стала чуть длиннее с картинкой)?
-![[ciscoCLI.png]]
 ________________________________________________________________________
 Paths: [[Networks]]
 Tags: #Networks 
