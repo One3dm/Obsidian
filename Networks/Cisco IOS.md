@@ -39,25 +39,19 @@ Feature Sets (наборы функций)
 | **Unified Communications** | Голос (CUBE, SRST, Voice Gateway) |
 | **Security** | Firewall, VPN, IPS, DMVPN |
 
----
-
-### 🚫 Исключения (не IOS)
+Исключения (не IOS)
 
 - **ASA** — Linux
 - **IOS-XR** — для операторских роутеров
 - **NX-OS** — для дата-центровых коммутаторов (Nexus)
 
----
-
-### 🔌 Способы управления IOS
+Способы управления IOS
 
 - Консоль (Console)
 - Telnet / SSH
 - AUX-порт
 
----
-
-### 🖼️ Пример версии IOS на реальном устройстве
+Пример версии IOS на реальном устройстве
 
 > [!example]
 > **Release notes для Cisco 3560CX**

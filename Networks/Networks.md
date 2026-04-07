@@ -5,7 +5,7 @@
 [[Crimping Network Cable]]
 [[Connection to Cisco Device]]
 [[Cisco IOS]]
-[[Системные команды и Cisco IOS]]
+[[Cisco IOS CLI]]
 [[Что такое mac адрес]]
 [[IPv4]]
 [[VLSM]]
