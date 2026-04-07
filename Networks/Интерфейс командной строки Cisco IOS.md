@@ -6,7 +6,7 @@
 - Привилегированный режим **Privileged executive (Privileged EXEC) mode** (Switch#)
 - Глобальный режим конфигурации **Global configuration mode** (Switch(config)#)
 - Другие режимы конфигурации, такие как режим конфигурации интерфейса (Switch(config-if)#)
-![[командная строка.png]]
+![[ciscoCLI.png]]
 ________________________________________________________________________
 Paths: [[Networks]]
 Tags: #Networks 
