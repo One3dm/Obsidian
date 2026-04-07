@@ -23,35 +23,7 @@ Cisco IOS CLI — команды, горячие клавиши, troubleshooting
 | `Space` | Следующая страница вывода (`--More--`) |
 | `Enter` | Следующая строка |
 
----
-
-### 📋 Основные команды `show`
-
-| Команда | Что показывает |
-|---------|----------------|
-| `show version` | Версия IOS, модель, uptime, register |
-| `show running-config` | Текущая конфигурация (в RAM) |
-| `show startup-config` | Сохранённая конфигурация (в NVRAM) |
-| `show interfaces` | Статус всех интерфейсов, ошибки, MTU |
-| `show ip interface brief` | Краткий статус IP на интерфейсах |
-| `show ip route` | Таблица маршрутизации |
-| `show arp` | ARP-таблица |
-| `show mac-address-table` | Таблица MAC-адресов (коммутатор) |
-| `show vlan` | VLAN’ы |
-| `show cdp neighbors` | Соседние Cisco-устройства (CDP) |
-| `show spanning-tree` | STP |
-| `show ip dhcp binding` | Выданные DHCP-адреса |
-| `show ip nat translations` | Таблица NAT |
-| `show history` | История введённых команд |
-| `show flash` | Содержимое Flash-памяти |
-| `show inventory` | UDI (PID, VID, серийный номер) |
-| `show processes` | Активные процессы |
-| `show power` | Информация о питании |
-| `show hardware` | Информация о железе |
-
----
-
-### 🔍 Фильтрация вывода (pipe `|`)
+Фильтрация вывода (pipe `|`)
 
 ```cisco
 Switch# show running-config | include ip dhcp pool
