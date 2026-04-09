@@ -15,7 +15,7 @@
 [[Embedding Variables in Strings]]
 [[Other Characteristics of Strings]]
 [[Numbers]]
-
+[[Booleans and None]]
 
 ________________________________________________________________________
 Paths: [[Core]]
