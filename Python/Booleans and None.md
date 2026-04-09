@@ -1,4 +1,4 @@
-Booleans и None
+**Booleans и None**
 
 Тип bool
 `bool` — это тип данных, который может принимать только два значения:
@@ -96,7 +96,7 @@ if port_open and not firewall_blocked:
     print("Порт открыт и не заблокирован фаерволом")
 ```
 
-### Приоритет операторов:
+Приоритет операторов:
 
 ```python
 # Порядок выполнения: not → and → or
@@ -109,9 +109,7 @@ result = True or False and not True
 result = (True or False) and (not True)  # False
 ```
 
----
-
-## Truish (правдоподобность)
+**Truish (правдоподобность)**
 
 Python позволяет использовать **небулевы значения** в логическом контексте.
 
