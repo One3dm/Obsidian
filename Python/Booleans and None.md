@@ -235,8 +235,7 @@ config_data = load_configuration()
 last_backup_time = None  # Бэкап ещё не делался
 ```
 
-### Проверка на None:
-
+Проверка на None:
 ```python
 my_var = None
 
@@ -256,8 +255,7 @@ if not my_var:          # Это проверит на False, а не тольк
     print("Сработает для None, но также для 0, '', [], и т.д.")
 ```
 
-### Почему `is None`, а не `== None`?
-
+Почему `is None`, а не `== None`?
 ```python
 # is проверяет идентичность объектов (один и тот же объект в памяти)
 # == проверяет равенство значений
@@ -278,8 +276,7 @@ custom == None  # True (по нашей реализации)
 custom is None  # False (это не настоящий None)
 ```
 
-### Практические примеры для сетей:
-
+Практические примеры для сетей:
 ```python
 # Обработка результата команды
 command_output = execute_command("show version")
