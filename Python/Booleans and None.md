@@ -127,8 +127,7 @@ Python позволяет использовать **небулевы значе
 | `None` | всегда `False` | — |
 | `bytes` | `b""` | `b"data"` |
 
-### Примеры:
-
+Примеры:
 ```python
 bool("some string")   # True
 bool("")              # False
@@ -146,8 +145,7 @@ bool({"ip": "8.8.8.8"})  # True
 bool({})              # False
 ```
 
-### Практическое использование в сетях:
-
+Практическое использование в сетях:
 ```python
 # Проверка конфигурации
 config = "hostname Router1\ninterface GigabitEthernet0/1"
