@@ -19,7 +19,7 @@
 [[Reading from a File]]
 [[Writing to a File]]
 [[Appending to a File]]
-
+[[An Aside on Python Code Blocks]]
 
 ________________________________________________________________________
 Paths: [[Core]]
