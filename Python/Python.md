@@ -17,7 +17,7 @@
 [[Numbers]]
 [[Booleans and None]]
 [[Reading from a File]]
-
+[[Writing to a File]]
 
 
 
