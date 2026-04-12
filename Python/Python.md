@@ -16,6 +16,10 @@
 [[Other Characteristics of Strings]]
 [[Numbers]]
 [[Booleans and None]]
+[[Reading from a File]]
+
+
+
 
 ________________________________________________________________________
 Paths: [[Core]]
