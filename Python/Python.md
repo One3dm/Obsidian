@@ -18,7 +18,7 @@
 [[Booleans and None]]
 [[Reading from a File]]
 [[Writing to a File]]
-
+[[Appending to a File]]
 
 
 ________________________________________________________________________
