@@ -24,10 +24,7 @@ f_exclusive = open("new_config.txt", "x")  # только если не суще
 f_rw = open("data.txt", "w+")          # чтение и запись
 ```
 
----
-
-## Метод `.write()`
-
+Метод `.write()`
 ```python
 f = open("test_file.txt", "w")
 bytes_written = f.write("Testing...\n")
@@ -35,7 +32,7 @@ print(f"Записано {bytes_written} байт")  # 11
 f.close()
 ```
 
-### Особенности `.write()`:
+Особенности `.write()`:
 
 1. **Возвращает количество записанных байт** (символов)
 2. **Не добавляет автоматически `\n`** — нужно указывать явно
