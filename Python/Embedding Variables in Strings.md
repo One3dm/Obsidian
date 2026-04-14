@@ -1,192 +1,189 @@
-**Вставка переменных в строки**
+Вставка переменных в строки
 
-В Python есть **три основных способа** вставить переменные в строку.
-1. Оператор `%` (старый стиль, как в C)
+3 способа форматирования строк
 
+1. Старый стиль (`%`) — не рекомендуется
 ```python
 # Одна переменная
-"Это строка: %s" % "привет"
-# 'Это строка: привет'
+"Device: %s" % "Router1"  # 'Device: Router1'
 
-my_var = "Hello"
-"Это строка: %s" % my_var
-# 'Это строка: Hello'
-
-# Несколько переменных — нужен кортеж
-"Это строка: %s %s" % (my_var, "hello")
-# 'Это строка: Hello hello'
-
-# Разные спецификаторы формата
+# Несколько переменных
 "IP: %s, Mask: %s" % ("192.168.1.1", "255.255.255.0")
-"Number: %d, Float: %.2f" % (42, 3.14159)  # %d - целое, %.2f - float с 2 знаками
 ```
 
-2. Метод `.format()` (появился в Python 3)
-
+2. Метод `.format()` — устаревший
 ```python
-# Позиционные аргументы
-"Это строка: {} {}".format(my_var, "hello")
-# 'Это строка: Hello hello'
-
-# Именованные аргументы
+"Device: {}, IP: {}".format("Router1", "192.168.1.1")
 "Device: {name}, IP: {ip}".format(name="Router1", ip="192.168.1.1")
-# 'Device: Router1, IP: 192.168.1.1'
-
-# Индексы и форматирование
-"IP: {0}, Mask: {1}, Gateway: {0}".format("192.168.1.1", "255.255.255.0")
-# 'IP: 192.168.1.1, Mask: 255.255.255.0, Gateway: 192.168.1.1'
-
-"Uptime: {:.1f} days".format(365.25)  # Форматирование чисел
-# 'Uptime: 365.2 days'
 ```
 
-3. f-строки (Python 3.6+, **рекомендуемый способ**)
-
+### 3. f-строки — **рекомендуемый способ** ✅
 ```python
-my_var = "Hello"
-my_var2 = "hello"
-
-f"Это строка: {my_var} {my_var2}"
-# 'Это строка: Hello hello'
+name = "Router1"
+ip = "192.168.1.1"
+f"Device: {name}, IP: {ip}"  # 'Device: Router1, IP: 192.168.1.1'
 ```
 
-**Возможности f-строк:**
+---
 
-**Выражения внутри `{}`:**
+## Возможности f-строк
+
+### Выражения внутри фигурных скобок
 ```python
-# Математические выражения
-f"Сумма: {5 + 3}"                    # 'Сумма: 8'
-f"Пропускная способность: {1000 * 8} Mbps"  # 'Пропускная способность: 8000 Mbps'
+# Математические операции
+bandwidth = 1000
+f"Bandwidth: {bandwidth * 8} Mbps"  # 'Bandwidth: 8000 Mbps'
 
 # Вызов методов
-ip = "192.168.1.1"
-f"IP: {ip.upper()}"                  # 'IP: 192.168.1.1'
-f"Обратный IP: {ip.split('.')[::-1]}"  # 'Обратный IP: ['1', '1', '168', '192']'
+interface = "GigabitEthernet0/1"
+f"Interface: {interface.upper()}"  # 'Interface: GIGABITETHERNET0/1'
 
 # Условные выражения
 status = True
-f"Статус: {'UP' if status else 'DOWN'}"  # 'Статус: UP'
+f"Status: {'UP' if status else 'DOWN'}"  # 'Status: UP'
 
 # Форматирование чисел
 uptime = 365.256
-f"Uptime: {uptime:.2f} дней"         # 'Uptime: 365.26 дней'
-f"Загрузка CPU: {25.5:.1f}%"         # 'Загрузка CPU: 25.5%'
-
-# Вызов функций
-def get_network():
-    return "192.168.1.0/24"
-    
-f"Сеть: {get_network()}"             # 'Сеть: 192.168.1.0/24'
+f"Uptime: {uptime:.2f} days"  # 'Uptime: 365.26 days'
+f"CPU Usage: {25.5:.1f}%"     # 'CPU Usage: 25.5%'
 ```
 
-**Многострочные f-строки:**
+### Многострочные f-строки
 ```python
-name = "SW-01"
+hostname = "SW-01"
 ip = "192.168.1.1"
 mask = "255.255.255.0"
 
 config = f"""
-hostname {name}
+hostname {hostname}
 !
-interface vlan1
+interface Vlan1
  ip address {ip} {mask}
 !
 """
 ```
 
-**f-строки для отладки (Python 3.8+):**
+### Отладка с f-строками (Python 3.8+)
 ```python
-# Добавление = выводит и имя переменной, и её значение
 device = "Router1"
 port = 22
 print(f"{device=} {port=}")  # "device='Router1' port=22"
 ```
 
-Практические примеры для сетевой автоматизации
+---
 
+## Практические примеры
+
+### Генерация конфигурации
 ```python
-# Формирование команд для оборудования
-hostname = "SW-01"
-vlan_id = 100
-vlan_name = "Management"
-
-# Конфигурация VLAN
-vlan_config = f"""
-vlan {vlan_id}
- name {vlan_name}
-!
-"""
-
-# Команды интерфейса
-interface = "GigabitEthernet0/1"
-ip_address = "10.0.0.1"
-subnet_mask = "255.255.255.0"
-
-interface_config = f"""
+def generate_interface_config(interface, ip, mask, description):
+    """Генерирует конфигурацию интерфейса"""
+    return f"""
 interface {interface}
- description Management interface
- ip address {ip_address} {subnet_mask}
+ description {description}
+ ip address {ip} {mask}
  no shutdown
 !
 """
 
-# Отчёт о состоянии
-devices = ["R1", "R2", "R3"]
-online_count = 2
-report = f"""
-Отчёт о доступности устройств:
-Всего устройств: {len(devices)}
-Доступно: {online_count}
-Процент доступности: {(online_count/len(devices))*100:.1f}%
+# Использование
+config = generate_interface_config(
+    "GigabitEthernet0/1",
+    "10.0.0.1",
+    "255.255.255.0",
+    "Uplink to Core"
+)
+print(config)
+```
+
+### Создание отчётов
+```python
+def create_availability_report(devices):
+    """Создаёт отчёт о доступности устройств"""
+    total = len(devices)
+    online = sum(1 for d in devices if d["status"] == "up")
+    
+    return f"""
+Network Availability Report
+===========================
+Total devices: {total}
+Online: {online}
+Offline: {total - online}
+Availability: {(online/total)*100:.1f}%
 """
+
+# Использование
+devices = [
+    {"name": "R1", "status": "up"},
+    {"name": "R2", "status": "down"},
+    {"name": "R3", "status": "up"}
+]
+
+report = create_availability_report(devices)
+print(report)
 ```
 
-Сравнение способов
-
-| Способ | Пример | Плюсы | Минусы | Когда использовать |
-|--------|--------|-------|--------|-------------------|
-| `%` | `"%s: %s" % ("IP", ip)` | Быстрый, знаком C-программистам | Нечитаемый, ограниченный | Почти никогда (легаси код) |
-| `.format()` | `"{}: {}".format("IP", ip)` | Гибкий, мощное форматирование | Многословный, сложный синтаксис | Редко, если нужна совместимость с Python 3.5- |
-| **f-строки** | `f"IP: {ip}"` | **Читаемый, быстрый, мощный** | Требует Python 3.6+ | **Всегда в современном коде** |
-
-Производительность:
+### Формирование команд
 ```python
-# f-строки самые быстрые
-import timeit
+def create_show_command(device_type, command, filter_option=None):
+    """Создаёт команду для оборудования"""
+    if device_type == "cisco":
+        if filter_option:
+            return f"show {command} | include {filter_option}"
+        else:
+            return f"show {command}"
+    elif device_type == "juniper":
+        return f"show {command}"
+    else:
+        return f"display {command}"
 
-timeit.timeit('"%s %s" % ("Hello", "World")')      # ~0.1 мс
-timeit.timeit('"{} {}".format("Hello", "World")')  # ~0.15 мс  
-timeit.timeit('f"{a} {b}"', setup='a="Hello"; b="World"')  # ~0.07 мс
+# Использование
+cmd = create_show_command("cisco", "running-config", "^interface")
+print(f"Command: {cmd}")  # 'show running-config | include ^interface'
 ```
 
-📌 Итог
-Основные рекомендации:
-```python
-# ✅ Лучший способ (f-строки) - используйте всегда
-name = "Router1"
-ip = "192.168.1.1"
-print(f"Устройство: {name}, IP: {ip}")
+---
 
-# ⚠️ Устаревшие способы (знать, но не использовать в новом коде)
-print("Устройство: %s, IP: %s" % (name, ip))
-print("Устройство: {}, IP: {}".format(name, ip))
-```
+## 📌 Итог
 
-Правила использования f-строк:
+**Основные правила:**
 1. **Всегда используйте f-строки** для Python 3.6+
-2. **Помещайте выражения в `{}`** — можно вычисления, вызовы методов, условия
-3. **Используйте форматирование** `{value:.2f}` для чисел
-4. **Для отладки** используйте `{variable=}` (Python 3.8+)
-5. **Избегайте слишком сложных выражений** внутри `{}` — выносите в отдельные переменные
+2. Помещайте выражения в `{}`: вычисления, вызовы методов, условия
+3. Используйте форматирование чисел: `{value:.2f}`
+4. Для отладки используйте `{variable=}` (Python 3.8+)
 
-Для сетевого инженера:
-- Используйте f-строки для **генерации конфигураций**
-- Применяйте для **формирования команд CLI**
-- Используйте для **создания отчётов и логов**
-- Помните про **многострочные f-строки** для больших блоков конфигурации
+**Советы для сетевого инженера:**
+- Используйте f-строки для генерации конфигураций
+- Применяйте для формирования команд CLI
+- Используйте для создания отчётов и логов
+- Помните про многострочные f-строки для больших блоков
 
-> [!IMPORTANT]
-> **Единственное исключение**: если ваш код должен работать на Python версии ниже 3.6, используйте `.format()`. Во всех остальных случаях — только f-строки.
+```python
+# ✅ Хороший шаблон
+def generate_device_config(hostname, interfaces):
+    """Генерирует конфигурацию устройства"""
+    config_lines = [f"hostname {hostname}\n!\n"]
+    
+    for intf_name, intf_config in interfaces.items():
+        config_lines.append(f"interface {intf_name}\n")
+        config_lines.append(f" description {intf_config['description']}\n")
+        config_lines.append(f" ip address {intf_config['ip']} {intf_config['mask']}\n")
+        config_lines.append("!\n")
+    
+    return "".join(config_lines)
+
+# Использование
+interfaces = {
+    "GigabitEthernet0/0": {
+        "description": "Uplink",
+        "ip": "10.0.0.1",
+        "mask": "255.255.255.252"
+    }
+}
+
+config = generate_device_config("Router1", interfaces)
+print(config)
+```
 
 
 ________________________________________________________________________
