@@ -1,92 +1,230 @@
-**Методы строк**
+Методы строк
 
 Как вызывать методы
 
-Метод — это функция, принадлежащая объекту. Вызывается через точку с **обязательными круглыми скобками**:
-
+Методы вызываются через точку с **круглыми скобками**:
 ```python
-my_var = "some string"
-my_var.upper()      # 'SOME STRING'
+text = "hello world"
+text.upper()  # 'HELLO WORLD'
 ```
 
-> [!NOTE]
-> Если забыть скобки, вы получите не результат, а информацию о методе:
+> [!WARNING]
+> Если забыть скобки, получите не результат, а информацию о методе:
 > ```python
-> my_var.upper   # <function str.upper()>
+> text.upper  # <function str.upper()>
 > ```
 
-Исходная строка не изменяется
+---
 
-Методы возвращают **новую строку**, не меняя оригинал:
+## Основные методы
+
+### `.split()` — разделение строки
 ```python
-my_var = "some string"
-my_var.upper()      # 'SOME STRING'
-my_var              # 'some string'  (не изменилась)
-
-# Чтобы сохранить результат — присвойте переменной:
-my_var = my_var.upper()
-my_var              # 'SOME STRING'
-```
-
-Основные методы строк
-
-`.split()` — разделение на части
-
-**По умолчанию** — делит по пробельным символам:
-```python
+# По умолчанию делит по пробелам
 sentence = "This is a sentence"
-sentence.split()
-# ['This', 'is', 'a', 'sentence']
+words = sentence.split()  # ['This', 'is', 'a', 'sentence']
+
+# С указанием разделителя
+ip_addr = "192.168.1.1"
+octets = ip_addr.split(".")  # ['192', '168', '1', '1']
+
+# Ограничение количества разбиений
+data = "value1,value2,value3,value4"
+parts = data.split(",", 2)  # ['value1', 'value2', 'value3,value4']
 ```
 
-**С разделителем**:
+### `.join()` — объединение списка в строку
 ```python
-ip_addr = "172.31.21.15"
-ip_addr.split(".")
-# ['172', '31', '21', '15']
+# Объединение с разделителем
+octets = ['192', '168', '1', '1']
+ip_addr = ".".join(octets)  # '192.168.1.1'
+
+# Объединение без разделителя
+chars = ['h', 'e', 'l', 'l', 'o']
+word = "".join(chars)  # 'hello'
 ```
 
-`.join()` — объединение списка в строку
+### `.strip()` — удаление пробелов по краям
 ```python
-octets = ['172', '31', '21', '15']
-".".join(octets)
-# '172.31.21.15'
+text = "   hello world   "
+clean = text.strip()  # 'hello world'
 
-"---".join(octets)
-# '172---31---21---15'
+# Удаление конкретных символов
+text = "***hello***"
+clean = text.strip("*")  # 'hello'
 ```
 
-`.strip()` — удаление пробелов по краям
+### `.upper()` / `.lower()` — изменение регистра
 ```python
-sentence = '   текст с пробелами   '
-sentence.strip()
-# 'текст с пробелами'
+"hello".upper()  # 'HELLO'
+"WORLD".lower()  # 'world'
 ```
 
-`.upper()` / `.lower()` — регистр
+### `.replace()` — замена подстроки
 ```python
-"hello".upper()   # 'HELLO'
-"WORLD".lower()   # 'world'
+text = "hello world"
+new_text = text.replace("world", "Python")  # 'hello Python'
+
+# Замена нескольких вхождений
+text = "a b c d"
+new_text = text.replace(" ", "-")  # 'a-b-c-d'
 ```
 
-Другие полезные методы
+---
 
-| Метод                | Что делает               | Пример                                  |
-| -------------------- | ------------------------ | --------------------------------------- |
-| `.replace(old, new)` | Заменяет подстроку       | `"a b c".replace(" ", "-")` → `"a-b-c"` |
-| `.startswith(x)`     | Начинается ли с x        | `"hello".startswith("he")` → `True`     |
-| `.endswith(x)`       | Заканчивается ли на x    | `"hello".endswith("lo")` → `True`       |
-| `.find(x)`           | Индекс первого вхождения | `"hello".find("l")` → `2`               |
-| `.count(x)`          | Количество вхождений     | `"hello".count("l")` → `2`              |
+## Другие полезные методы
 
-**📌 Итог**
+### Проверка начала и конца строки
+```python
+filename = "config.txt"
+if filename.endswith(".txt"):
+    print("Это текстовый файл")
 
-| Метод | Результат |
-|-------|-----------|
-| `.upper()` | ВСЕ ЗАГЛАВНЫЕ |
-| `.split()` | Строка → список |
-| `.join()` | Список → строка |
-| `.strip()` | Убирает пробелы по краям |
+command = "show interface"
+if command.startswith("show"):
+    print("Это команда просмотра")
+```
+
+### Поиск в строке
+```python
+text = "hello world"
+
+# Поиск подстроки
+position = text.find("world")  # 6
+position = text.find("python")  # -1 (не найдено)
+
+# Проверка вхождения
+if "world" in text:
+    print("Найдено 'world'")
+
+# Количество вхождений
+count = text.count("l")  # 3
+```
+
+---
+
+## Практические примеры
+
+### Обработка вывода с сетевого устройства
+```python
+def parse_interface_status(output):
+    """Парсит статус интерфейса из вывода команды"""
+    lines = output.strip().split("\n")
+    
+    for line in lines:
+        if "line protocol" in line:
+            parts = line.split()
+            interface = parts[0]
+            status = parts[1] + "/" + parts[4]
+            return interface, status
+    
+    return None, None
+
+# Использование
+output = """
+GigabitEthernet0/1 is up, line protocol is up
+  Hardware is Gigabit Ethernet, address is aabb.ccdd.eeff
+"""
+
+interface, status = parse_interface_status(output)
+print(f"Interface: {interface}, Status: {status}")
+```
+
+### Нормализация IP-адреса
+```python
+def normalize_ip(ip_string):
+    """Нормализует IP-адрес"""
+    # Удаляем лишние пробелы
+    ip_string = ip_string.strip()
+    
+    # Разбиваем на октеты
+    octets = ip_string.split(".")
+    
+    # Проверяем, что ровно 4 октета
+    if len(octets) != 4:
+        raise ValueError(f"Invalid IP address: {ip_string}")
+    
+    # Убираем лишние пробелы в каждом октете
+    octets = [octet.strip() for octet in octets]
+    
+    # Собираем обратно
+    return ".".join(octets)
+
+# Использование
+ip = " 192.168. 1.1 "
+normalized = normalize_ip(ip)  # '192.168.1.1'
+```
+
+### Анализ конфигурации
+```python
+def find_vlans_in_config(config):
+    """Находит все VLAN в конфигурации"""
+    vlans = []
+    
+    for line in config.split("\n"):
+        line = line.strip()
+        if line.startswith("vlan "):
+            # Извлекаем номер VLAN
+            vlan_num = line.split()[1]
+            vlans.append(vlan_num)
+    
+    return vlans
+
+# Использование
+config = """
+vlan 10
+ name Management
+!
+vlan 20
+ name Users
+!
+"""
+
+vlans = find_vlans_in_config(config)
+print(f"Found VLANs: {', '.join(vlans)}")  # 'Found VLANs: 10, 20'
+```
+
+---
+
+## 📌 Итог
+
+**Основные методы:**
+1. `.split()` — строка → список
+2. `.join()` — список → строка  
+3. `.strip()` — удаление пробелов по краям
+4. `.upper()`/`.lower()` — изменение регистра
+5. `.replace()` — замена подстроки
+
+**Советы для сетевого инженера:**
+- Используйте `.split()` для парсинга вывода команд
+- Используйте `.join()` для сборки конфигураций
+- Используйте `.strip()` для очистки пользовательского ввода
+- Используйте `.startswith()`/`.endswith()` для проверки формата
+
+```python
+# ✅ Хороший шаблон для обработки вывода
+def process_command_output(output):
+    """Обрабатывает вывод команды"""
+    results = []
+    
+    for line in output.strip().split("\n"):
+        line = line.strip()
+        if line and not line.startswith("!"):  # пропускаем пустые строки и комментарии
+            results.append(line)
+    
+    return "\n".join(results)
+
+# Использование
+raw_output = """
+!
+interface GigabitEthernet0/1
+ description Uplink
+!
+"""
+
+clean_output = process_command_output(raw_output)
+print(clean_output)
+```
 
 ________________________________________________________________________
 Paths: [[Python]]
