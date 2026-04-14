@@ -21,6 +21,9 @@
 [[Appending to a File]]
 [[An Aside on Python Code Blocks]]
 [[File Context Managers]]
+[[List Basics]]
+
+
 
 ________________________________________________________________________
 Paths: [[Core]]
