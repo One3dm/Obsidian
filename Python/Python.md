@@ -26,10 +26,9 @@
 [[List Methods]]
 [[List Slices]]
 [[Multidimensional Lists]]
-[[Mutable and Immutable Objects]]
+[[Immutable Objects]]
 [[Mutable Objects]]
-
-
+[[Shallow vs Deep Copy]]
 
 
 ________________________________________________________________________
