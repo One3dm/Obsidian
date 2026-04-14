@@ -24,7 +24,7 @@
 [[List Basics]]
 [[Len, Range, and Membership]]
 [[List Methods]]
-
+[[List Slices]]
 
 
 
