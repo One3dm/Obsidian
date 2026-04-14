@@ -1,23 +1,12 @@
+Запись в файл
 
-```markdown
----
-topic: Запись в файл (Writing to a File)
-source: Lesson 2 / Writing to a File
-instructor: Kirk Byers
-tags: [pynet, python, files, writing]
----
-
-# Запись в файл
-
-## Открытие файла для записи
-
+Открытие файла для записи
 ```python
 f = open("file.txt", "w")  # режим 'w' - write (запись)
 ```
 
----
 
-## Режимы записи
+Режимы записи
 
 | Режим | Что делает | Когда использовать |
 |-------|------------|-------------------|
@@ -35,10 +24,7 @@ with open("log.txt", "a") as f:      # добавление
     f.write("новая запись\n")
 ```
 
----
-
-## Метод `.write()`
-
+Метод `.write()`
 ```python
 with open("output.txt", "w") as f:
     bytes_written = f.write("Hello\n")  # возвращает количество байт
@@ -49,7 +35,6 @@ with open("output.txt", "w") as f:
 - Не добавляет `\n` автоматически
 - Принимает только строки
 - Можно вызывать несколько раз
-
 ```python
 with open("output.txt", "w") as f:
     f.write("Строка 1\n")
@@ -57,10 +42,7 @@ with open("output.txt", "w") as f:
     f.write(f"Число: {42}\n")  # числа нужно преобразовать
 ```
 
----
-
-## Метод `.writelines()`
-
+Метод `.writelines()`
 ```python
 lines = ["Строка 1\n", "Строка 2\n", "Строка 3\n"]
 
@@ -68,12 +50,9 @@ with open("output.txt", "w") as f:
     f.writelines(lines)  # записывает все строки сразу
 ```
 
----
-
-## Буферизация данных
+Буферизация данных
 
 Данные не записываются на диск сразу, а накапливаются в буфере.
-
 ```python
 with open("log.txt", "w") as f:
     f.write("Сообщение 1\n")  # в буфере
@@ -88,9 +67,7 @@ with open("log.txt", "w") as f:
 - Отладка
 - Режим реального времени
 
----
-
-## Важное предупреждение
+Важное предупреждение
 
 **Режим `"w"` перезаписывает файл!**
 
@@ -110,12 +87,9 @@ if os.path.exists("config.txt"):
     # Создайте бэкап перед перезаписью
 ```
 
----
+Практические примеры
 
-## Практические примеры
-
-### Запись конфигурации устройства
-
+Запись конфигурации устройства
 ```python
 def save_config(hostname, interfaces):
     with open(f"{hostname}_config.txt", "w") as f:
@@ -138,8 +112,7 @@ interfaces = {
 save_config("Router1", interfaces)
 ```
 
-### Экспорт в CSV
-
+Экспорт в CSV
 ```python
 def export_to_csv(devices, filename="devices.csv"):
     with open(filename, "w") as f:
@@ -160,10 +133,7 @@ devices = [
 export_to_csv(devices)
 ```
 
----
-
-## 📌 Итог
-
+📌 Итог
 **Основные правила:**
 1. Используйте `with open(..., "w")` для записи
 2. Добавляйте `\n` в конце строк
@@ -175,7 +145,6 @@ export_to_csv(devices)
 - Для логов используйте `"a"` (append)
 - Для конфигураций используйте `"w"` с бэкапами
 - Используйте `.writelines()` для списков строк
-
 ```python
 # ✅ Правильный шаблон
 with open("output.txt", "w") as f:
