@@ -17,18 +17,16 @@
 "Device: {name}, IP: {ip}".format(name="Router1", ip="192.168.1.1")
 ```
 
-### 3. f-строки — **рекомендуемый способ** ✅
+3. f-строки — **рекомендуемый способ** ✅
 ```python
 name = "Router1"
 ip = "192.168.1.1"
 f"Device: {name}, IP: {ip}"  # 'Device: Router1, IP: 192.168.1.1'
 ```
 
----
+Возможности f-строк
 
-## Возможности f-строк
-
-### Выражения внутри фигурных скобок
+Выражения внутри фигурных скобок
 ```python
 # Математические операции
 bandwidth = 1000
@@ -48,7 +46,7 @@ f"Uptime: {uptime:.2f} days"  # 'Uptime: 365.26 days'
 f"CPU Usage: {25.5:.1f}%"     # 'CPU Usage: 25.5%'
 ```
 
-### Многострочные f-строки
+Многострочные f-строки
 ```python
 hostname = "SW-01"
 ip = "192.168.1.1"
@@ -63,18 +61,16 @@ interface Vlan1
 """
 ```
 
-### Отладка с f-строками (Python 3.8+)
+Отладка с f-строками (Python 3.8+)
 ```python
 device = "Router1"
 port = 22
 print(f"{device=} {port=}")  # "device='Router1' port=22"
 ```
 
----
+Практические примеры
 
-## Практические примеры
-
-### Генерация конфигурации
+Генерация конфигурации
 ```python
 def generate_interface_config(interface, ip, mask, description):
     """Генерирует конфигурацию интерфейса"""
@@ -96,7 +92,7 @@ config = generate_interface_config(
 print(config)
 ```
 
-### Создание отчётов
+Создание отчётов
 ```python
 def create_availability_report(devices):
     """Создаёт отчёт о доступности устройств"""
@@ -123,7 +119,7 @@ report = create_availability_report(devices)
 print(report)
 ```
 
-### Формирование команд
+Формирование команд
 ```python
 def create_show_command(device_type, command, filter_option=None):
     """Создаёт команду для оборудования"""
@@ -142,10 +138,7 @@ cmd = create_show_command("cisco", "running-config", "^interface")
 print(f"Command: {cmd}")  # 'show running-config | include ^interface'
 ```
 
----
-
-## 📌 Итог
-
+📌 Итог
 **Основные правила:**
 1. **Всегда используйте f-строки** для Python 3.6+
 2. Помещайте выражения в `{}`: вычисления, вызовы методов, условия
