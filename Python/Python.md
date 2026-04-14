@@ -23,6 +23,7 @@
 [[File Context Managers]]
 [[List Basics]]
 [[Len, Range, and Membership]]
+[[List Methods]]
 
 
 
