@@ -14,10 +14,7 @@ text.upper()  # 'HELLO WORLD'
 > text.upper  # <function str.upper()>
 > ```
 
----
-
-## Основные методы
-
+Основные методы
 ### `.split()` — разделение строки
 ```python
 # По умолчанию делит по пробелам
@@ -70,11 +67,9 @@ text = "a b c d"
 new_text = text.replace(" ", "-")  # 'a-b-c-d'
 ```
 
----
+Другие полезные методы
 
-## Другие полезные методы
-
-### Проверка начала и конца строки
+Проверка начала и конца строки
 ```python
 filename = "config.txt"
 if filename.endswith(".txt"):
@@ -85,7 +80,7 @@ if command.startswith("show"):
     print("Это команда просмотра")
 ```
 
-### Поиск в строке
+Поиск в строке
 ```python
 text = "hello world"
 
@@ -101,11 +96,9 @@ if "world" in text:
 count = text.count("l")  # 3
 ```
 
----
+Практические примеры
 
-## Практические примеры
-
-### Обработка вывода с сетевого устройства
+Обработка вывода с сетевого устройства
 ```python
 def parse_interface_status(output):
     """Парсит статус интерфейса из вывода команды"""
@@ -130,7 +123,7 @@ interface, status = parse_interface_status(output)
 print(f"Interface: {interface}, Status: {status}")
 ```
 
-### Нормализация IP-адреса
+Нормализация IP-адреса
 ```python
 def normalize_ip(ip_string):
     """Нормализует IP-адрес"""
@@ -155,7 +148,7 @@ ip = " 192.168. 1.1 "
 normalized = normalize_ip(ip)  # '192.168.1.1'
 ```
 
-### Анализ конфигурации
+Анализ конфигурации
 ```python
 def find_vlans_in_config(config):
     """Находит все VLAN в конфигурации"""
@@ -184,9 +177,7 @@ vlans = find_vlans_in_config(config)
 print(f"Found VLANs: {', '.join(vlans)}")  # 'Found VLANs: 10, 20'
 ```
 
----
-
-## 📌 Итог
+📌 Итог
 
 **Основные методы:**
 1. `.split()` — строка → список
