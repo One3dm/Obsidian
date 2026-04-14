@@ -22,6 +22,8 @@
 [[An Aside on Python Code Blocks]]
 [[File Context Managers]]
 [[List Basics]]
+[[Len, Range, and Membership]]
+
 
 
 
