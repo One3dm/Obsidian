@@ -1,4 +1,3 @@
-
 Чтение из файла
 
 Открытие файла
@@ -9,7 +8,6 @@ f = open("file.txt")  # по умолчанию 'r' (чтение)
 4 способа чтения
 
 1. `.read()` — весь файл
-
 ```python
 with open("config.txt") as f:
     data = f.read()  # вся содержимое как одна строка
@@ -17,16 +15,14 @@ with open("config.txt") as f:
 print(f"Размер: {len(data)} символов")
 ```
 
-### 2. `.readline()` — одна строка
-
+2. `.readline()` — одна строка
 ```python
 with open("log.txt") as f:
     first_line = f.readline().strip()  # первая строка без \n
     second_line = f.readline().strip() # вторая строка
 ```
 
-### 3. `.readlines()` — все строки в список
-
+3. `.readlines()` — все строки в список
 ```python
 with open("devices.txt") as f:
     lines = f.readlines()  # список строк
@@ -34,17 +30,14 @@ with open("devices.txt") as f:
 print(f"В файле {len(lines)} строк")
 ```
 
-### 4. Цикл `for` — самый эффективный
-
+4. Цикл `for` — самый эффективный
 ```python
 with open("big_log.txt") as f:
     for line in f:
         print(line.strip())  # обрабатываем построчно
 ```
 
----
-
-## Сравнение методов
+Сравнение методов
 
 | Метод | Что возвращает | Память | Когда использовать |
 |-------|---------------|--------|-------------------|
@@ -53,12 +46,9 @@ with open("big_log.txt") as f:
 | `.readlines()` | Список строк | Много | Нужны все строки как список |
 | `for line in f` | По одной строке | **Мало** | **Большие файлы** |
 
----
+Практические примеры
 
-## Практические примеры
-
-### Чтение конфигурации устройства
-
+Чтение конфигурации устройства
 ```python
 def read_config(filename):
     with open(filename) as f:
@@ -77,8 +67,7 @@ def read_config(filename):
 config = read_config("router.cfg")
 ```
 
-### Анализ лог-файла
-
+Анализ лог-файла
 ```python
 def analyze_log(log_file):
     error_count = 0
@@ -97,8 +86,7 @@ def analyze_log(log_file):
 analyze_log("system.log")
 ```
 
-### Чтение списка устройств
-
+Чтение списка устройств
 ```python
 def read_device_list(filename):
     devices = []
@@ -121,10 +109,7 @@ devices = read_device_list("devices.txt")
 print(f"Найдено устройств: {len(devices)}")  # 3
 ```
 
----
-
-## Обработка ошибок
-
+Обработка ошибок
 ```python
 import os
 
@@ -149,10 +134,7 @@ else:
     print("Файл успешно прочитан")
 ```
 
----
-
-## 📌 Итог
-
+📌 Итог
 **Основные правила:**
 1. Используйте `with open(...) as f:` для автоматического закрытия
 2. Для больших файлов используйте цикл `for line in f:`
@@ -176,13 +158,6 @@ else:
     print("Файл не найден")
 ```
 
----
-
-## 🔗 Связанные темы
-- [[Запись в файл]]
-- [[Добавление в файл (append)]]
-- [[Контекстные менеджеры (with)]]
-```
 
 ________________________________________________________________________
 Paths: [[Python]]
