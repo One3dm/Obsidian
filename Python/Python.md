@@ -31,7 +31,7 @@
 [[Shallow vs Deep Copy]]
 [[Tuples]]
 [[Conditionals]]
-
+[[For Loops]]
 
 
 
