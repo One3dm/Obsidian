@@ -36,6 +36,7 @@
 [[List Comprehensions]]
 [[Generator Expressions]]
 [[Sets]]
+[[Set Comprehension]]
 
 
 
