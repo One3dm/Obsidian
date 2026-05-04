@@ -38,6 +38,7 @@
 [[Sets]]
 [[Set Comprehension]]
 [[Dictionary Basics]]
+[[Looping over Dictionaries]]
 
 
 
