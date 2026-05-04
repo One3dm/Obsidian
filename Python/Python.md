@@ -41,6 +41,8 @@
 [[Looping over Dictionaries]]
 [[Dictionary Methods]]
 [[Dictionaries are Mutable]]
+[[Nested Dictionaries]]
+
 
 
 
