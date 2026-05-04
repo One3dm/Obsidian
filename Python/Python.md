@@ -39,6 +39,8 @@
 [[Set Comprehension]]
 [[Dictionary Basics]]
 [[Looping over Dictionaries]]
+[[Dictionary Methods]]
+[[Dictionaries are Mutable]]
 
 
 
