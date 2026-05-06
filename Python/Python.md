@@ -43,6 +43,8 @@
 [[Dictionaries are Mutable]]
 [[Nested Dictionaries]]
 [[Dictionary Comprehensions]]
+[[Exception Handling Basics]]
+
 
 
 
