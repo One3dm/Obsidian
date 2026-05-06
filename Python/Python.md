@@ -42,7 +42,7 @@
 [[Dictionary Methods]]
 [[Dictionaries are Mutable]]
 [[Nested Dictionaries]]
-
+[[Dictionary Comprehensions]]
 
 
 
