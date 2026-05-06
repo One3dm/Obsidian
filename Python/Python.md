@@ -47,7 +47,8 @@
 [[Handling Multiple Exception Types]]
 [[Capturing and Re-raising Exceptions]]
 [[Broad Exception Handling]]
-
+[[Finally]]
+[[Raising an Exception]]
 
 
 
