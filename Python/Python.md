@@ -44,7 +44,8 @@
 [[Nested Dictionaries]]
 [[Dictionary Comprehensions]]
 [[Exception Handling Basics]]
-[[]]
+[[Handling Multiple Exception Types]]
+
 
 
 
