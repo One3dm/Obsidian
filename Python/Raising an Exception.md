@@ -67,7 +67,7 @@ raise NetworkError("Connection timeout")
 | Данные не найдены | `raise KeyError` или `LookupError` |
 
 
-## 📌 Итог
+📌 Итог
 
 ```python
 # Поднятие встроенного исключения
