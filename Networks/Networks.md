@@ -33,7 +33,7 @@ ACL
 [[NAT]]
 [[QoS]]
 [[VPN]]
-[[IPv6]]]]
+[[IPv6]]
 [[D(D)oS]]
 MP-BGP
 VRF-lite
