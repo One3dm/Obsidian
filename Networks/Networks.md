@@ -6,7 +6,7 @@
 [[Connection to Cisco Device]]
 [[Cisco IOS]]
 [[Cisco IOS CLI]]
-[[Что такое mac адрес]]
+[[MAC]]
 [[IPv4]]
 [[VLSM]]
 Unicast, Broadcast, Multicast
