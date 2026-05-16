@@ -9,7 +9,7 @@
 [[MAC]]
 [[IP]]
 [[IPv4]]
-Unicast, Broadcast, Multicast
+[[Unicast, Broadcast, Multicast]]
 [[ARP]]
 [[Инкапсуляция данных]]
 [[Ethernet]]
