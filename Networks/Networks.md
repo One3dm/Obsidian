@@ -7,7 +7,7 @@
 [[Cisco IOS]]
 [[Cisco IOS CLI]]
 [[MAC]]
-[[IPv4]]
+[[IP]]
 [[VLSM]]
 Unicast, Broadcast, Multicast
 [[ARP]]
