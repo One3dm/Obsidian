@@ -8,7 +8,7 @@
 [[Cisco IOS CLI]]
 [[MAC]]
 [[IP]]
-[[VLSM]]
+[[IPv4]]
 Unicast, Broadcast, Multicast
 [[ARP]]
 [[Инкапсуляция данных]]
