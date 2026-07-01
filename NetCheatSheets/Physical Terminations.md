@@ -3,5 +3,5 @@
 
 
 ________________________________________________________________________
-Paths: [[Net]]
-Tags: #Networks 
+Paths: [[Networks]]
+Tags: #NetCheatSheets 
