@@ -1,7 +1,9 @@
-![[physical_terminations.png]]
+[[Physical Terminations]]
+
+
 
 
 
 ________________________________________________________________________
-Paths: [[NetCheatSheets]]
+Paths: [[Core]], [[Networks]]
 Tags: #NetCheatSheets 

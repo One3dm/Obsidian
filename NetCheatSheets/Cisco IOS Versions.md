@@ -1,5 +1,6 @@
-![[physical_terminations.png]]
 
+![[Cisco_IOS_Versions.png]]
+![[Cisco_IOS_Versions_ENG.png]]
 
 
 ________________________________________________________________________
