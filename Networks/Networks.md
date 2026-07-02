@@ -11,7 +11,7 @@
 [[IPv4]]
 [[Unicast, Broadcast, Multicast]]
 [[ARP]]
-[[Инкапсуляция данных]]
+[[Data Encapsulation]]
 [[Ethernet]]
 [[TCP и UDP]]
 [[VLAN]]
