@@ -48,7 +48,7 @@
 
    - Launch Obsidian.  
    - Click **“Open folder as vault”** on the start screen.  
-   - Navigate to the folder you just cloned (`network‑knowledge‑base`) and select it.  
+   - Navigate to the folder you just cloned (Obsidian) and select it.  
 
    The vault will load all markdown files, allowing you to:  
 
@@ -59,7 +59,7 @@
 4. **(Optional) Install Python dependencies** – if you plan to execute the scripts locally.  
 
    ```bash
-   cd network-knowledge-base/Scripts
+   cd Obsidian/Scripts
    python3 -m venv venv
    source venv/bin/activate   # Windows: venv\Scripts\activate
    pip install -r requirements.txt   # create this file as you add libs
