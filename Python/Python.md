@@ -72,6 +72,8 @@
 [[Using kwargs to Pass in Keyword Arguments]]
 [[Using args and kwargs in Function Definitions]]
 [[Lambda Expressions]]
+[[Classes and Objects Overview]]
+[[Dunder-init and Creating Objects]]
 
 
 
