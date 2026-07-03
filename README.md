@@ -40,7 +40,7 @@
    # Using HTTPS
    git clone https://github.com/One3dm/Obsidian
    # OR using SSH
-   git clone git@github.com:<your‑username>/network‑knowledge‑base.git
+   git clone ggit@github.com:One3dm/Obsidian.git
    ```
 
    *(Replace `<your‑username>` with your GitHub/GitLab account name.)*  
