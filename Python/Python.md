@@ -65,6 +65,11 @@
 [[Function Basics]]
 [[Positional and Named Arguments]]
 [[Default Values]]
+[[Return Values]]
+[[LEGB Rules - Resolving Names]]
+[[Additional Aspects of Functions]]
+[[Using args to Pass in Arguments]]
+[[Using kwargs to Pass in Keyword Arguments]]
 
 
 
