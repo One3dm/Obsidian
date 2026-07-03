@@ -83,6 +83,7 @@
 ![NTC-Templates](https://img.shields.io/badge/-NTC_Templates-1BA0D7?style=flat-square&logo=python)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 **Networking Protocols & Specializations:**
 ![BGP](https://img.shields.io/badge/BGP-F58220?style=flat-square)
