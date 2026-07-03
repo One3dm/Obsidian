@@ -31,3 +31,7 @@ print(m.group(0))            # 'simple test\nhello'
 re.search("^.*$", text, flags=re.S)
 ```
 
+
+________________________________________________________________________
+Paths: [[Python]]
+Tags: #Python   

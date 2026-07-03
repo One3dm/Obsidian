@@ -58,7 +58,7 @@
 [[Anchors and re.MULTILINE]]
 [[re.findall() и сборка шаблонов]]
 [[Match logic]]
-
+[[re.DOTALL]]
 
 
 
