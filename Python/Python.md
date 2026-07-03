@@ -75,6 +75,7 @@
 [[Classes and Objects Overview]]
 [[Dunder-init and Creating Objects]]
 [[Methods]]
+[[Static Methods]]
 
 
 
