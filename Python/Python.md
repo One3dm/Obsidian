@@ -54,7 +54,7 @@
 [[Special Characters]]
 [[Simple Examples]]
 [[Additional Examples]]
-
+[[Capture Groups and Raw Strings]]
 
 ________________________________________________________________________
 Paths: [[Core]]
