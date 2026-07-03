@@ -62,6 +62,7 @@
 [[re.escape]]
 [[Named Capture Groups]]
 [[regex101.com]]
+[[Function Basics]]
 
 
 
