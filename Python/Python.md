@@ -55,6 +55,11 @@
 [[Simple Examples]]
 [[Additional Examples]]
 [[Capture Groups and Raw Strings]]
+[[Anchors and re.MULTILINE]]
+
+
+
+
 
 ________________________________________________________________________
 Paths: [[Core]]
