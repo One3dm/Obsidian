@@ -77,6 +77,7 @@
 [[Methods]]
 [[Static Methods]]
 [[Special Names]]
+[[Properties]]
 
 
 
