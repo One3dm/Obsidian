@@ -27,6 +27,7 @@
 | **6** | **`NetCheatSheets`** | **Infographics / quick‑reference cheat‑sheets** for networking technologies (BGP, OSPF, VPN, security, etc.). |
 | **7** | `README.md`          | This file – overview of the repository, its structure, and my professional focus.                             |
 
+
 🛠️ How to Use This Repository  
 
 1. **Install Obsidian** – the markdown‑based knowledge‑base editor.  
@@ -37,7 +38,7 @@
 
    ```bash
    # Using HTTPS
-   git clone https://github.com/<your‑username>/network‑knowledge‑base.git
+   git clone https://github.com/One3dm/Obsidian
    # OR using SSH
    git clone git@github.com:<your‑username>/network‑knowledge‑base.git
    ```
