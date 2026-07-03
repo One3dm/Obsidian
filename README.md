@@ -42,8 +42,7 @@
    # OR using SSH
    git clone ggit@github.com:One3dm/Obsidian.git
    ```
-
-   *(Replace `<your‑username>` with your GitHub/GitLab account name.)*  
+ 
 
 3. **Open the folder in Obsidian**  
 
