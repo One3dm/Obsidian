@@ -39,9 +39,8 @@ msg1: Something
 msg2: Hello
 ```
 
----
 
-## Смешивание позиционных и именованных аргументов
+Смешивание позиционных и именованных аргументов
 
 **Правило:** сначала все **позиционные**, потом **именованные**.
 
@@ -52,9 +51,8 @@ display_output("This is a test", msg3="named args", msg2="of positional and")
 Позиционный аргумент `"This is a test"` → `msg1`  
 Именованные `msg2` и `msg3` получают свои значения.
 
----
 
-## Ошибка: повторное назначение аргумента
+Ошибка: повторное назначение аргумента
 
 ```python
 display_output("This is a test", "named args", msg2="of positional and")
@@ -64,9 +62,9 @@ display_output("This is a test", "named args", msg2="of positional and")
 - Позиционные: `"This is a test"` → `msg1`, `"named args"` → `msg2`
 - Именованный: `msg2="of positional and"` — конфликт
 
----
 
-## 📌 Итог
+
+📌 Итог
 
 | Тип | Пример | Правило |
 |-----|--------|---------|
@@ -74,10 +72,6 @@ display_output("This is a test", "named args", msg2="of positional and")
 | Именованные | `func(a=1, b=2)` | Порядок не важен |
 | Смешанные | `func(1, b=2, c=3)` | **Сначала позиционные** |
 
----
-
-## 🔗 Связанные темы
-- [[Основы функций (Function Basics)]]
-- [[Default Values]]
-- [[Using *args and **kwargs]]
-```
+________________________________________________________________________
+Paths: [[Python]]
+Tags: #Python   
