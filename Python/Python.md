@@ -76,6 +76,7 @@
 [[Dunder-init and Creating Objects]]
 [[Methods]]
 [[Static Methods]]
+[[Special Names]]
 
 
 

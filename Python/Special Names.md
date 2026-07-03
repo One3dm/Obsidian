@@ -1,14 +1,6 @@
-```markdown
----
-topic: Специальные имена (Special Names): Приватные атрибуты, Name Mangling, Магические методы
-source: Lesson 7 / Special Names
-instructor: Kirk Byers
-tags: [pynet, python, oop, private, name-mangling, magic-methods]
----
+**Специальные имена (Special Names)**
 
-# Специальные имена (Special Names)
-
-## 1. "Приватные" атрибуты (один подчёркивание в начале)
+1. "Приватные" атрибуты (один подчёркивание в начале)
 
 ```python
 class NetDevice:
@@ -26,9 +18,8 @@ nd = NetDevice(...)
 print(nd._username)   # 'admin' — доступ есть, но так делать не стоит
 ```
 
----
 
-## 2. Name Mangling (два подчёркивания в начале)
+2. Name Mangling (два подчёркивания в начале)
 
 ```python
 class NetDevice:
@@ -51,9 +42,8 @@ nd._NetDevice__device_type   # 'cisco_ios'
 > [!NOTE]
 > Kirk говорит: "Name mangling — странная штука, я никогда не использовал её на практике. Её цель — показать создателю подкласса, что этот атрибут не стоит переопределять."
 
----
 
-## 3. Магические методы (dunder methods)
+3. Магические методы (dunder methods)
 
 Это методы с **двумя подчёркиваниями в начале и в конце** (double underscore `__method__`). Они имеют особое значение в Python и вызываются автоматически.
 
@@ -83,9 +73,8 @@ print(nd)   # автоматически вызывается __str__
 | `__len__(self)` | При `len(объект)` |
 | `__getitem__(self, key)` | При `объект[key]` |
 
----
 
-## 📌 Итог
+📌 Итог
 
 | Конструкция | Название | Назначение |
 |-------------|----------|------------|
@@ -103,10 +92,7 @@ class MyClass:
         return f"MyClass: {self._private}"
 ```
 
----
 
-## 🔗 Связанные темы
-- [[Properties]]
-- [[Dunder-init и создание объектов]]
-- [[Методы (Methods)]]
-```
+________________________________________________________________________
+Paths: [[Python]]
+Tags: #Python   
