@@ -50,6 +50,7 @@
 [[Finally]]
 [[Raising an Exception]]
 [[Understanding a Stack Trace]]
+[[Regular Expressions]]
 
 
 
