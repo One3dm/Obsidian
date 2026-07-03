@@ -17,15 +17,16 @@
 
 ## Folders and Their Contents (Knowledge Base in Development...)
 
-| № | Folder | Description |
-|---|--------|-------------|
-| **1** | `images` | Images used throughout the project. |
-| **2** | `Networks` | Theoretical knowledge base on networking. |
-| **3** | `Python` | Theory and notes on the Python programming language. |
-| **4** | `Scripts` | Python scripts for automating routine operations. |
-| **5** | `Core` | Core project files – structure of the main points. |
+| №     | Folder               | Description                                                                                                   |
+| ----- | -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **1** | `images`             | Images used throughout the project.                                                                           |
+| **2** | `Networks`           | Theoretical knowledge base on networking.                                                                     |
+| **3** | `Python`             | Theory and notes on the Python programming language.                                                          |
+| **4** | `Scripts`            | Python scripts for automating routine operations.                                                             |
+| **5** | `Core`               | Core project files – structure of the main points.                                                            |
 | **6** | **`NetCheatSheets`** | **Infographics / quick‑reference cheat‑sheets** for networking technologies (BGP, OSPF, VPN, security, etc.). |
-| **7** | `README.md` | This file – overview of the repository, its structure, and my professional focus. |
+| **7** | `README.md`          | This file – overview of the repository, its structure, and my professional focus.                             |
+
 🛠️ How to Use This Repository  
 
 1. **Install Obsidian** – the markdown‑based knowledge‑base editor.  
