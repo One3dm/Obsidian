@@ -91,3 +91,7 @@ sorted(persons, key=lambda person_tuple: person_tuple[1])
 sorted(data, key=lambda x: x[1])
 ```
 
+
+________________________________________________________________________
+Paths: [[Python]]
+Tags: #Python  
