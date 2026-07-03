@@ -18,12 +18,12 @@ prompt = "[lp] One@3dm $"
 ```python
 prompt_literal = re.escape(prompt)
 print(prompt_literal)
-# \[lp\] ktbyers@pydev2\ \$
+# \[lp\] One@3dm\ \$
 ```
 
 Теперь `[` стал `\[`, `]` стал `\]`, а `$` стал `\$` — каждый символ ищется буквально.
 
----
+
 
 ## 📌 Итог
 
@@ -35,15 +35,9 @@ print(prompt_literal)
 ```python
 import re
 
-prompt = "[lp] ktbyers@pydev2 $"
+prompt = "[lp] One@3dm $"
 literal_pattern = re.escape(prompt)
 
 match = re.search(literal_pattern, output)
 ```
 
----
-
-## 🔗 Связанные темы
-- [[Специальные символы в регулярных выражениях]]
-- [[Логика поиска (Match logic)]]
-```
