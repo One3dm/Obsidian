@@ -1,4 +1,4 @@
-## 🌐 Network Engineer | Network Automation
+🌐 Network Engineer | Network Automation
 
 Hello! I'm a **Network Engineer** with over 6 years of experience in enterprise and carrier networks. This repository serves as my **professional knowledge base and portfolio**, where I document solutions and showcase practical automation scripts developed to solve real network operations challenges. Your feedback is welcome!
 
@@ -36,7 +36,7 @@ This file. Provides an overview of the repository's structure, content, and my p
 
 ## 🔧 Technology Stack
 
-### **Network Engineering & Core Automation:**
+**Network Engineering & Core Automation:**
 ![Cisco IOS](https://img.shields.io/badge/Cisco_IOS-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Netmiko](https://img.shields.io/badge/Netmiko-1BA0D7?style=flat-square)
@@ -46,19 +46,19 @@ This file. Provides an overview of the repository's structure, content, and my p
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-### **Networking Protocols & Specializations:**
+**Networking Protocols & Specializations:**
 ![BGP](https://img.shields.io/badge/BGP-F58220?style=flat-square)
 ![OSPF](https://img.shields.io/badge/OSPF-4CAF50?style=flat-square)
 ![IPsec/VPN](https://img.shields.io/badge/IPsec/VPN-00599C?style=flat-square)
 ![Network Security](https://img.shields.io/badge/Network_Security-FF5252?style=flat-square)
 ![Cisco ISE](https://img.shields.io/badge/Cisco_ISE-1BA0D7?style=flat-square&logo=cisco)
 
-### **Systems & Monitoring:**
+**Systems & Monitoring:**
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=flat-square&logo=zabbix&logoColor=white)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
 
-## 📫 Connect With Me
+📫 Connect With Me
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://linkedin.com/in/pavel-stepanov-33471b3a5 )
 [![Telegram](https://img.shields.io/badge/-Telegram-blue?style=flat-square&logo=telegram)](https://t.me/Fronz3dm)
 [![Habr](https://img.shields.io/badge/-Habr-77A2B6?style=flat-square&logo=habr&logoColor=white)](https://career.habr.com/fronz)
