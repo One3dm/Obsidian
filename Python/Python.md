@@ -78,6 +78,7 @@
 [[Static Methods]]
 [[Special Names]]
 [[Properties]]
+[[Properties - Setters and Property Example]]
 
 
 
