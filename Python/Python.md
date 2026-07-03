@@ -59,6 +59,7 @@
 [[re.findall() и сборка шаблонов]]
 [[Match logic]]
 [[re.DOTALL]]
+[[re.escape]]
 
 
 
