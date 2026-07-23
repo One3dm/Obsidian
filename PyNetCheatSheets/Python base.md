@@ -1,6 +1,7 @@
-[[Python from Kirk]]
-[[Python base]]
+
+![[PythonBase.png]]
+
 
 ________________________________________________________________________
-Paths: [[Core]], [[Networks]], [[Python]]
+Paths: [[PyNetCheatSheets]]
 Tags: #PyNetCheatSheets 

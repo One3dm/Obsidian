@@ -4,6 +4,7 @@
 [[Python]]
 [[Scripts]]
 [[NetCheatSheets]]
+[[PyNetCheatSheets]]
 
 ________________________________________________________________________
 Paths: -
