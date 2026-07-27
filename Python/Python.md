@@ -87,6 +87,9 @@
 [[Inheritance Conclusion]]
 [[Composition]]
 [[Libraries and Environment Overview]]
+[[PYPI]]
+[[Importing Libraries]]
+[[Library Imports and Names]]
 
 
 
