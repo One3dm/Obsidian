@@ -80,6 +80,10 @@
 [[Properties]]
 [[Properties - Setters and Property Example]]
 [[Deleters]]
+[[Data Classes]]
+[[Class Attributes]]
+[[Inheritance]]
+
 
 
 
