@@ -84,6 +84,9 @@
 [[Class Attributes]]
 [[Inheritance]]
 [[Inheritance and Super]]
+[[Inheritance Conclusion]]
+[[Composition]]
+[[Libraries and Environment Overview]]
 
 
 
