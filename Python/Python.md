@@ -83,7 +83,7 @@
 [[Data Classes]]
 [[Class Attributes]]
 [[Inheritance]]
-
+[[Inheritance and Super]]
 
 
 
