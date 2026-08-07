@@ -82,8 +82,8 @@ TCP (Transmission Control Protocol) — надёжность
 
 Установка TCP-соединения (3-way handshake)
 
-![[TCPconect.jpg]]
-> *(Здесь будет картинка 3-way handshake.)*
+![[TCPconect.png]]
+
 
 | Шаг | Направление | Флаги | Что происходит |
 |-----|-------------|-------|----------------|
