@@ -15,7 +15,7 @@
 [[Ethernet]]
 [[TCP и UDP]]
 [[VLAN]]
-L2 взаимодействие
+[[L2 interaction]]
 STP
 [[Port-Security]]
 [[DHCP]]
