@@ -55,9 +55,7 @@ MAC-таблица коммутатора (CAM):
 MAC-адрес VLAN Порт Тип  
 AA:BB:CC:DD:EE:01 1 Gi0/1 Динамическая
 
----
-
-🧭 3. Получение IP-адреса (DHCP)
+ 3. Получение IP-адреса (DHCP)
 
 Если статический IP — хост сразу готов к общению.
 
@@ -67,15 +65,15 @@ AA:BB:CC:DD:EE:01 1 Gi0/1 Динамическая
 
 (Картинка: DORA-процесс — хост → Discover (broadcast), сервер → Offer (broadcast), хост → Request (broadcast), сервер → ACK (broadcast/unicast))
 
-Шаг Пакет Направление Структура  
-1 DHCP Discover Хост → Broadcast L2: SRC MAC = хост, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = 0.0.0.0, DST IP = 255.255.255.255; L4: UDP SPORT=68, DPORT=67  
-2 DHCP Offer Сервер → Broadcast L2: SRC MAC = сервер, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = IP сервера, DST IP = 255.255.255.255; L4: UDP SPORT=67, DPORT=68  
-3 DHCP Request Хост → Broadcast L2: SRC MAC = хост, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = 0.0.0.0, DST IP = 255.255.255.255; L4: UDP SPORT=68, DPORT=67  
-4 DHCP ACK Сервер → Broadcast/Unicast L2: SRC MAC = сервер, DST MAC = хост или FF:FF:FF:FF:FF:FF; L3: SRC IP = IP сервера, DST IP = 255.255.255.255 или IP хоста
+| Шаг | Пакет         | Направление                | Структура                                                                                                                        |
+| --- | ------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | DHCP Discover | Хост → Broadcast           | L2: SRC MAC = хост, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = 0.0.0.0, DST IP = 255.255.255.255; L4: UDP SPORT=68, DPORT=67      |
+| 2   | DHCP Offer    | Сервер → Broadcast         | L2: SRC MAC = сервер, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = IP сервера, DST IP = 255.255.255.255; L4: UDP SPORT=67, DPORT=68 |
+| 3   | DHCP Request  | Хост → Broadcast           | L2: SRC MAC = хост, DST MAC = FF:FF:FF:FF:FF:FF; L3: SRC IP = 0.0.0.0, DST IP = 255.255.255.255; L4: UDP SPORT=68, DPORT=67      |
+| 4   | DHCP ACK      | Сервер → Broadcast/Unicast | L2: SRC MAC = сервер, DST MAC = хост или FF:FF:FF:FF:FF:FF; L3: SRC IP = IP сервера, DST IP = 255.255.255.255 или IP хоста       |
 
----
 
-🧭 4. ARP для шлюза
+4. ARP для шлюза
 
 Когда хост получил IP, он должен узнать MAC-адрес шлюза по умолчанию:
 
