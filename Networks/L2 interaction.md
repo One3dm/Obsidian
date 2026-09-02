@@ -106,19 +106,19 @@ AA:BB:CC:DD:EE:01 1 Gi0/1 Динамическая
 
 Структура ARP-ответа (L2 + ARP):
 
-Уровень Поле Значение  
-L2 Destination MAC AA:BB:CC:DD:EE:01 (хост)  
-L2 Source MAC 11:22:33:44:55:66 (шлюз)  
-L2 Type 0x0806 (ARP)  
-ARP Sender MAC 11:22:33:44:55:66  
-ARP Sender IP 192.168.1.1  
-ARP Target MAC AA:BB:CC:DD:EE:01  
-ARP Target IP 192.168.1.10  
-ARP Opcode 2 (Reply)
+| Уровень | Поле            | Значение                 |
+| ------- | --------------- | ------------------------ |
+| L2      | Destination MAC | AA:BB:CC:DD:EE:01 (хост) |
+| L2      | Source MAC      | 11:22:33:44:55:66 (шлюз) |
+| L2      | Type            | 0x0806 (ARP)             |
+| ARP     | Sender MAC      | 11:22:33:44:55:66        |
+| ARP     | Sender IP       | 192.168.1.1              |
+| ARP     | Target MAC      | AA:BB:CC:DD:EE:01        |
+| ARP     | Target IP       | 192.168.1.10             |
+| ARP     | Opcode          | 2 (Reply)                |
 
----
 
-🚀 5. Обмен данными внутри сети
+5. Обмен данными внутри сети
 
 Теперь хост имеет всё: IP, MAC шлюза, IP шлюза.  
 Он готов отправлять данные:
