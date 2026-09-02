@@ -93,6 +93,13 @@ AA:BB:CC:DD:EE:01 1 Gi0/1 Динамическая
 
 (Картинка: структура ARP-запроса и ответа — Ethernet-кадр + ARP-пакет рядом)
 
+| Уровень | Поле            | Значение                 |
+| ------- | --------------- | ------------------------ |
+| L2      | Destination MAC | FF:FF:FF:FF:FF:FF        |
+| L2      | Source MAC      | AA:BB:CC:DD:EE:01 (хост) |
+| L2      | Type            | 0x0806 (ARP)             |
+| ARP     | Sender MAC      |                          |
+
 Уровень Поле Значение  
 L2 Destination MAC FF:FF:FF:FF:FF:FF  
 L2 Source MAC AA:BB:CC:DD:EE:01 (хост)  
