@@ -98,7 +98,11 @@ AA:BB:CC:DD:EE:01 1 Gi0/1 Динамическая
 | L2      | Destination MAC | FF:FF:FF:FF:FF:FF        |
 | L2      | Source MAC      | AA:BB:CC:DD:EE:01 (хост) |
 | L2      | Type            | 0x0806 (ARP)             |
-| ARP     | Sender MAC      |                          |
+| ARP     | Sender MAC      | AA:BB:CC:DD:EE:01        |
+| ARP     | Sender IP       | 192.168.1.10 (IP хоста)  |
+| ARP     | Target MAC      | 00:00:00:00:00:00        |
+| ARP     | Target IP       | 192.168.1.1 (IP шлюза)   |
+| ARP     | Opcode          | 1 (Request)              |
 
 Уровень Поле Значение  
 L2 Destination MAC FF:FF:FF:FF:FF:FF  
