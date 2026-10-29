@@ -16,7 +16,7 @@
 [[TCP и UDP]]
 [[VLAN]]
 [[L2 interaction]]
-STP
+[[STP]]
 [[Port-Security]]
 [[DHCP]]
 [[DNS]]
