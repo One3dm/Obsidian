@@ -11,9 +11,18 @@
 
 **🖥️ Client-Server Model.** **Client-server model** — клиент отправляет запрос, сервер проверяет права и возвращает ответ. В AWS «сервер» — это **virtual server** (например, **Amazon Elastic Compute Cloud (Amazon EC2)**), а не физическая машина. **Permissions** — сервер проверяет легитимность запроса перед ответом.
 
-**🏗️ Cloud Deployment Types.** **Cloud-based deployment** — всё в облаке: миграция существующих ресурсов, новые приложения или комбинация. **On-premises deployment** — **legacy IT infrastructure** плюс **virtualization** и **resource management tools**; не даёт облачных выгод, но даёт выделенные ресурсы и низкую задержку. **Hybrid deployment** — комбинация cloud-based и on-premises.
+**🏗️ Cloud Deployment Types.** 
+**Cloud-based deployment** — всё в облаке: миграция существующих ресурсов, новые приложения или комбинация. 
+**On-premises deployment** — **legacy IT infrastructure** плюс **virtualization** и **resource management tools**; не даёт облачных выгод, но даёт выделенные ресурсы и низкую задержку. 
+**Hybrid deployment** — комбинация cloud-based и on-premises.
 
-**🎯 Six Key Benefits of the AWS Cloud.** **Trade fixed expense for variable expense** (фиксированные затраты становятся переменными). **Benefit from massive economies of scale** (экономия за счёт масштаба снижает цены). **Stop guessing capacity** (не нужно угадывать ёмкость, масштабирование по требованию). **Increase speed and agility** (ресурсы за минуты, а не недели). **Stop spending money running and maintaining data centers** (фокус на бизнесе, а не на стойках). **Go global in minutes** (развёртывание в нескольких **AWS Regions** за клики).
+**🎯 Six Key Benefits of the AWS Cloud.** 
+**Trade fixed expense for variable expense** (фиксированные затраты становятся переменными). 
+**Benefit from massive economies of scale** (экономия за счёт масштаба снижает цены). 
+**Stop guessing capacity** (не нужно угадывать ёмкость, масштабирование по требованию). 
+**Increase speed and agility** (ресурсы за минуты, а не недели). 
+**Stop spending money running and maintaining data centers** (фокус на бизнесе, а не на стойках). 
+**Go global in minutes** (развёртывание в нескольких **AWS Regions** за клики).
 
 **🌍 AWS Global Infrastructure.** **AWS Region** — физическая географическая область, содержит минимум **3 Availability Zones**. **Availability Zone (AZ)** — один или несколько **data centers** с независимыми **power**, **networking** и **connectivity**; **AZ** физически изолированы друг от друга. Рекомендуется распределять ресурсы по нескольким **AZ** для **High Availability (HA)** и **Fault Tolerance (FT)**: если одна **AZ** падает, приложение продолжает работать.
 
