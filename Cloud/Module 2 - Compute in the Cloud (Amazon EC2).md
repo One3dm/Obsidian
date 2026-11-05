@@ -94,43 +94,43 @@ AWS Batch — для пакетных задач: ты даёшь ему спи�
 
 ## ⚠️ Экзаменационные ловушки
 
-**ELB и Auto Scaling — не одно и то же.** **ELB** распределяет трафик, **Auto Scaling** добавляет и убирает инстансы. Вопрос «автоматически масштабирует EC2 при пике» — это **Auto Scaling**; «распределяет запросы между инстансами» — это **ELB**.
+Elastic Load Balancing (ELB) и Amazon EC2 Auto Scaling — не одно и то же. Elastic Load Balancing (ELB) — «эластичная балансировка нагрузки» — распределяет входящий трафик между серверами. Amazon EC2 Auto Scaling — «автоматическое масштабирование EC2» — добавляет и убирает серверы. Вопрос «автоматически масштабирует EC2 при пике» — это Auto Scaling; «распределяет запросы между инстансами» — это ELB.
 
-**Dedicated Hosts vs Dedicated Instances.** **Dedicated Hosts** — целый физический сервер, полный контроль, нужен для **BYOL** и compliance. **Dedicated Instances** — изоляция от других аккаунтов, но ты не выбираешь конкретный сервер; проще и дешевле. Вопрос «нужен контроль над размещением и лицензии» — это **Dedicated Hosts**.
+Dedicated Hosts и Dedicated Instances — оба «выделенные», но по-разному. Dedicated Hosts — «выделенные хосты» — дают целый физический сервер в твоё распоряжение, полный контроль, нужен для Bring Your Own License (BYOL) — «принеси свою лицензию» — и compliance (соответствия требованиям). Dedicated Instances — «выделенные инстансы» — дают изоляцию от других аккаунтов, но ты не выбираешь, на каком именно сервере работаешь; проще и дешевле. Вопрос «нужен контроль над размещением и лицензии» — это Dedicated Hosts.
 
-**Spot vs Reserved.** **Spot** даёт скидку до 90%, но инстанс могут забрать; только для **fault-tolerant**. **Reserved** даёт до 75% и гарантию на срок; для **steady-state**.
+Spot Instances и Reserved Instances — обе со скидкой, но риск разный. Spot Instances — «спотовые инстансы» — дают скидку до 90%, но инстанс могут забрать в любой момент; только для fault-tolerant («устойчивых к сбоям») задач. Reserved Instances — «зарезервированные инстансы» — дают до 75% и гарантию на срок; для steady-state («стабильной») нагрузки.
 
-**Savings Plans vs Reserved Instances.** **Savings Plans** гибче: покрывают **Amazon EC2**, **AWS Fargate**, **AWS Lambda**, **Amazon SageMaker AI**, обязательство в **$/час**. **Reserved Instances** привязаны к instance family и **Region**, хотя внутри family и по **Availability Zones** есть гибкость. Вопрос «нужна гибкость между сервисами» — это **Savings Plans**.
+Savings Plans и Reserved Instances — обе экономят, но гибкость разная. Savings Plans — «планы экономии» — гибче: покрывают Amazon EC2, AWS Fargate, AWS Lambda и Amazon SageMaker AI, обязательство в $/час (долларах в час). Reserved Instances — «зарезервированные инстансы» — привязаны к instance family («семейству инстансов») и Region («региону»), хотя внутри семейства и по Availability Zones («зонам доступности») есть гибкость. Вопрос «нужна гибкость между сервисами» — это Savings Plans.
 
-**Capacity Reservations — это не скидка.** Это резерв capacity в конкретной **Availability Zone** с оплатой по **On-Demand** rate, даже если инстансы не запущены. Вопрос «гарантия capacity для критичной нагрузки» — это **Capacity Reservations**; «скидка за обязательство» — это **Savings Plans** или **Reserved Instances**.
+EC2 Capacity Reservations — это не скидка. EC2 Capacity Reservations — «резервирование ёмкости EC2» — резервирует capacity (мощность) в конкретной Availability Zone с оплатой по On-Demand rate («по требованию»), даже если инстансы не запущены. Вопрос «гарантия capacity для критичной нагрузки» — это Capacity Reservations; «скидка за обязательство» — это Savings Plans или Reserved Instances.
 
-**Auto Scaling: desired capacity по умолчанию равен minimum.** Если не указать **desired capacity**, оно будет равно **minimum capacity**. Именно **minimum** запускается сразу после создания группы.
+Auto Scaling: desired capacity по умолчанию равен minimum. Если не указать desired capacity («желаемое количество»), оно будет равно minimum capacity («минимальному количеству»). Именно minimum запускается сразу после создания группы.
 
-**Scalability vs Elasticity.** **Scalability** — способность расти долгосрочно. **Elasticity** — автоматическое масштабирование вверх и вниз в реальном времени. Вопрос «автоматически добавляет инстансы при пике» — это **elasticity**.
+Scalability и Elasticity — разные слова. Scalability — «масштабируемость» — способность системы расти долгосрочно. Elasticity — «эластичность» — автоматическое масштабирование вверх и вниз в реальном времени. Вопрос «автоматически добавляет инстансы при пике» — это elasticity.
 
-**ALB vs NLB.** **ALB** — HTTP/HTTPS, **Layer 7**, path-based routing; для веб-приложений. **NLB** — TCP/UDP, **Layer 4**, сохраняет **source IP**, фиксированный IP; для низкой задержки. Вопрос «нужен фиксированный IP балансировщика» — это **NLB**.
+Application Load Balancer (ALB) и Network Load Balancer (NLB) — разные уровни. Application Load Balancer (ALB) — «балансировщик приложений» — работает с HTTP/HTTPS на Layer 7 («7-й уровень»), умеет path-based routing («маршрутизацию по пути»); для веб-приложений. Network Load Balancer (NLB) — «сетевой балансировщик» — работает с TCP/UDP на Layer 4 («4-й уровень»), сохраняет source IP («IP-адрес источника»), имеет фиксированный IP; для низкой задержки. Вопрос «нужен фиксированный IP балансировщика» — это NLB.
 
-**ELB не跨 Region.** ELB работает в пределах одного **Region**, но может охватывать несколько **Availability Zones**. Межрегиональная маршрутизация — это **AWS Global Accelerator**.
+ELB не跨 Region. ELB работает в пределах одного Region («региона»), но может охватывать несколько Availability Zones («зон доступности»). Межрегиональная маршрутизация — это AWS Global Accelerator («глобальный ускоритель AWS»).
 
-**ELB не шифрует данные at rest и не кэширует контент.** Кэширование — это **Amazon CloudFront**; шифрование at rest — **Amazon EBS** и **Amazon S3**.
+ELB не шифрует данные at rest и не кэширует контент. Кэширование — это Amazon CloudFront («облачный фронт» — сеть доставки контента); шифрование at rest («в состоянии покоя», то есть на диске) — Amazon Elastic Block Store (Amazon EBS) и Amazon Simple Storage Service (Amazon S3).
 
-**SQS vs SNS.** **SQS** — очередь: consumer забирает сообщение, оно ждёт, пока его обработают. **SNS** — рассылка: subscriber получает сразу, и если он недоступен, сообщение может потеряться без DLQ. Вопрос «сообщения должны сохраняться, пока consumer не готов» — это **SQS**; «отправить уведомление сразу нескольким получателям» — это **SNS**.
+Amazon SQS и Amazon SNS — очередь и рассылка. Amazon Simple Queue Service (Amazon SQS) — «простой сервис очередей» — очередь: consumer («потребитель») забирает сообщение, оно ждёт, пока его обработают. Amazon Simple Notification Service (Amazon SNS) — «простой сервис уведомлений» — рассылка: subscriber («подписчик») получает сразу, и если он недоступен, сообщение может потеряться без Dead-Letter Queue (DLQ) — «очереди необработанных сообщений». Вопрос «сообщения должны сохраняться, пока consumer не готов» — это SQS; «отправить уведомление сразу нескольким получателям» — это SNS.
 
-**SQS Standard vs FIFO.** **Standard** — неограниченный throughput, **at-least-once**, **best-effort ordering**. **FIFO** — **exactly-once**, строгий порядок, но throughput ограничен. Вопрос «порядок команд критичен» — это **FIFO**; «максимальный throughput» — это **Standard**.
+SQS Standard и SQS FIFO — скорость против порядка. Standard queue — «стандартная очередь» — неограниченный throughput («пропускная способность»), at-least-once («как минимум один раз», возможны дубликаты), best-effort ordering («упорядочивание по мере возможности»). FIFO queue (First-In, First-Out — «первым пришёл, первым вышел») — exactly-once («ровно один раз»), строгий порядок, но throughput ограничен. Вопрос «порядок команд критичен» — это FIFO; «максимальный throughput» — это Standard.
 
-**EventBridge не хранит события как SQS.** EventBridge не предназначен для持久ящего хранения событий для последующей обработки; SQS хранит до 14 дней.
+EventBridge не хранит события как SQS. Amazon EventBridge не предназначен для持久ящего хранения событий для последующей обработки; SQS хранит до 14 дней.
 
-**SNS не гарантирует доставку, если subscriber недоступен** (без DLQ). SQS гарантирует, что сообщение будет ждать.
+SNS не гарантирует доставку, если subscriber недоступен (без DLQ). SQS гарантирует, что сообщение будет ждать.
 
-**Decoupling = loosely coupled.** Ключевые слова в вопросах: «independent», «failure of one component doesn't affect others», «buffer».
+Decoupling — это loosely coupled. Decoupling — «развязка» — означает loosely coupled («слабо связанные») компоненты. Ключевые слова в вопросах: «independent» («независимые»), «failure of one component doesn't affect others» («отказ одного компонента не влияет на другие»), «buffer» («буфер»).
 
-**Lambda vs Fargate.** **Lambda** — event-driven, короткие задачи, оплата за выполнение. **Fargate** — контейнеры, длительные процессы, оплата за provisioned CPU и memory, даже если контейнер простаивает. Вопрос «контейнеры без управления серверами» — это **Fargate**; «код по событию без серверов» — это **Lambda**.
+AWS Lambda и AWS Fargate — оба serverless, но для разного. AWS Lambda — event-driven («управляемый событиями»), короткие задачи, оплата за выполнение. AWS Fargate — контейнеры, длительные процессы, оплата за provisioned («выделенные») CPU и memory («память»), даже если контейнер простаивает. Вопрос «контейнеры без управления серверами» — это Fargate; «код по событию без серверов» — это Lambda.
 
-**ECS vs EKS.** **ECS** — AWS-native оркестрация, проще, если Kubernetes не нужен. **EKS** — управляемый **Kubernetes**, нужен для стандартного K8s API и экосистемы. Вопрос «нужен Kubernetes» — это **EKS**.
+Amazon ECS и Amazon EKS — оба оркестраторы, но разные стандарты. Amazon Elastic Container Service (Amazon ECS) — «эластичный сервис контейнеров Amazon» — AWS-native оркестрация, проще, если Kubernetes не нужен. Amazon Elastic Kubernetes Service (Amazon EKS) — «эластичный сервис Kubernetes Amazon» — управляемый Kubernetes, нужен для стандартного K8s API и экосистемы. Вопрос «нужен Kubernetes» — это EKS.
 
-**AWS Batch не равен EC2.** **AWS Batch** — управляемый сервис для пакетных вычислений, сам выделяет compute под задачи.
+AWS Batch не равен Amazon EC2. AWS Batch — «пакетная обработка AWS» — управляемый сервис для пакетных вычислений, сам выделяет compute («вычислительные ресурсы») под задачи.
 
-**EC2 — unmanaged и IaaS.** Патчинг **guest operating system** — **Customer**; патчинг **hypervisor** — **AWS**; **security groups** — **Customer**. Сравни с **Amazon S3** и **Amazon RDS**, где AWS управляет OS и платформой, а клиент отвечает только за данные и доступ.
+Amazon EC2 — unmanaged и IaaS. Amazon EC2 — unmanaged («неуправляемый AWS») и Infrastructure as a Service (IaaS) — «инфраструктура как сервис». Патчинг guest operating system («гостевой операционной системы») — Customer («клиент»); патчинг hypervisor («гипервизора») — AWS; security groups («группы безопасности») — Customer. Сравни с Amazon S3 и Amazon Relational Database Service (Amazon RDS), где AWS управляет OS и платформой, а клиент отвечает только за данные и доступ.
 
 ## ❓ Экзаменационные вопросы
 
