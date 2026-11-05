@@ -108,7 +108,8 @@ Auto Scaling: desired capacity по умолчанию равен minimum. Ес�
 
 Scalability и Elasticity — разные слова. Scalability — «масштабируемость» — способность системы расти долгосрочно. Elasticity — «эластичность» — автоматическое масштабирование вверх и вниз в реальном времени. Вопрос «автоматически добавляет инстансы при пике» — это elasticity.
 
-Application Load Balancer (ALB) и Network Load Balancer (NLB) — разные уровни. Application Load Balancer (ALB) — «балансировщик приложений» — работает с HTTP/HTTPS на Layer 7 («7-й уровень»), умеет path-based routing («маршрутизацию по пути»); для веб-приложений. Network Load Balancer (NLB) — «сетевой балансировщик» — работает с TCP/UDP на Layer 4 («4-й уровень»), сохраняет source IP («IP-адрес источника»), имеет фиксированный IP; для низкой задержки. Вопрос «нужен фиксированный IP балансировщика» — это NLB.
+Application Load Balancer (ALB) и Network Load Balancer (NLB) — разные уровни. Application Load Balancer (ALB) — «балансировщик приложений» — работает с HTTP/HTTPS на Layer 7 («7-й уровень»), умеет path-based routing («маршрутизацию по пути»); для веб-приложений.
+Network Load Balancer (NLB) — «сетевой балансировщик» — работает с TCP/UDP на Layer 4 («4-й уровень»), сохраняет source IP («IP-адрес источника»), имеет фиксированный IP; для низкой задержки. Вопрос «нужен фиксированный IP балансировщика» — это NLB.
 
 ELB не跨 Region. ELB работает в пределах одного Region («региона»), но может охватывать несколько Availability Zones («зон доступности»). Межрегиональная маршрутизация — это AWS Global Accelerator («глобальный ускоритель AWS»).
 
