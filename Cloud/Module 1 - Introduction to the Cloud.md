@@ -2,7 +2,7 @@
 
 🔑 Ключевые концепции
 
-### ☁️ Cloud Computing (определение AWS)
+☁️ Cloud Computing (определение AWS)
 
 - 🧠 **Cloud computing** — **on-demand delivery of IT resources over the internet with pay-as-you-go pricing**. Четыре элемента:
   1. **On-demand delivery** — доступ к ресурсам за секунды, без длительного provisioning.
