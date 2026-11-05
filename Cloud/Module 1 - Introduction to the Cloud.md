@@ -43,9 +43,11 @@ AZ физически изолированы друг от друга — есл
 | 🔐 **AWS Identity and Access Management (IAM)** | Управление доступом | Ответственность клиента (**security IN the cloud**) |
 | 📦 **Amazon Simple Storage Service (Amazon S3)** | Object storage | AWS управляет OS, клиент отвечает за данные и доступ |
 
-## ⚠️ Экзаменационные ловушки
+**⚠️ Экзаменационные ловушки**
 
-**AWS Shared Responsibility Model — главная путаница.** Запомни направление: **Security OF the cloud** — это AWS, **Security IN the cloud** — это Customer. Физическая безопасность дата-центра — AWS. Данные и **IAM-политики** — Customer. Патчинг **guest operating system** для **Amazon EC2** — Customer. Патчинг OS для **Amazon RDS** и **Amazon S3** — AWS.
+**AWS Shared Responsibility Model — главная путаница.** Запомни направление: **Security OF the cloud** — это AWS, 
+**Security IN the cloud** — это Customer. 
+Физическая безопасность дата-центра — AWS. Данные и **IAM-политики** — Customer. Патчинг **guest operating system** для **Amazon EC2** — Customer. Патчинг OS для **Amazon RDS** и **Amazon S3** — AWS.
 
 **«Least operational overhead».** Когда в вопросе просят «наименьшие операционные усилия», выбирай **managed services** и **serverless**. Чем абстрактнее сервис, тем меньше ответственности у клиента.
 
