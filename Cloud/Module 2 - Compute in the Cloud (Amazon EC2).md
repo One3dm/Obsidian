@@ -48,7 +48,11 @@ General purpose** — сбалансированные, CPU и память пр
 **Gateway Load Balancer (GWLB)** работает на **Layer 3** (IP) и нужен для third-party appliances вроде firewall и IDS/IPS.
 **Classic Load Balancer (CLB)** — legacy, для новых архитектур не рекомендуется.
 
-**Шаг 11. Зачем развязывать компоненты (Decoupling).** В **monolithic** архитектуре компоненты **tightly coupled**: если один упал, падает всё приложение. В **microservices** архитектуре компоненты **loosely coupled**: если один упал, остальные работают. Для этого в AWS есть три сервиса обмена сообщениями. **Amazon SQS** — очередь, **pull**-модель: consumer сам забирает сообщения, они хранятся до 14 дней, ничего не теряется, если consumer временно недоступен. **Amazon SNS** — **publish-subscribe**, **push**-модель: publisher отправляет в topic, subscribers (email, SMS, SQS, Lambda и др.) получают сразу; сообщения не хранятся. **Amazon EventBridge** — **event-driven** маршрутизация: правила (**rules**) фильтруют события по содержимому и направляют в targets; хорошо подходит для реакций на события AWS и SaaS.
+**Шаг 11. Зачем развязывать компоненты (Decoupling).** 
+В **monolithic** архитектуре компоненты **tightly coupled**: если один упал, падает всё приложение. 
+В **microservices** архитектуре компоненты **loosely coupled**: если один упал, остальные работают. 
+Для этого в AWS есть три сервиса обмена сообщениями. **
+Amazon SQS** — очередь, **pull**-модель: consumer сам забирает сообщения, они хранятся до 14 дней, ничего не теряется, если consumer временно недоступен. **Amazon SNS** — **publish-subscribe**, **push**-модель: publisher отправляет в topic, subscribers (email, SMS, SQS, Lambda и др.) получают сразу; сообщения не хранятся. **Amazon EventBridge** — **event-driven** маршрутизация: правила (**rules**) фильтруют события по содержимому и направляют в targets; хорошо подходит для реакций на события AWS и SaaS.
 
 **Шаг 12. SQS: Standard vs FIFO.** **Standard queue** даёт неограниченный throughput, но **at-least-once** delivery (возможны дубликаты) и **best-effort ordering** (порядок не гарантирован). **FIFO queue** даёт **exactly-once processing** и строгий порядок First-In-First-Out, но throughput ограничен. На экзамене: «порядок транзакций критичен» — это **FIFO**; «максимальный throughput, порядок не важен» — это **Standard**.
 
