@@ -111,7 +111,7 @@ Scalability и Elasticity — разные слова. Scalability — «мас�
 Application Load Balancer (ALB) и Network Load Balancer (NLB) — разные уровни. Application Load Balancer (ALB) — «балансировщик приложений» — работает с HTTP/HTTPS на Layer 7 («7-й уровень»), умеет path-based routing («маршрутизацию по пути»); для веб-приложений.
 Network Load Balancer (NLB) — «сетевой балансировщик» — работает с TCP/UDP на Layer 4 («4-й уровень»), сохраняет source IP («IP-адрес источника»), имеет фиксированный IP; для низкой задержки. Вопрос «нужен фиксированный IP балансировщика» — это NLB.
 
-ELB не跨 Region. ELB работает в пределах одного Region («региона»), но может охватывать несколько Availability Zones («зон доступности»). Межрегиональная маршрутизация — это AWS Global Accelerator («глобальный ускоритель AWS»).
+ELB (Elastic Load Balancer) не работает между регионами. ELB работает в пределах одного Region («региона»), но может охватывать несколько Availability Zones («зон доступности»). Межрегиональная маршрутизация — это AWS Global Accelerator («глобальный ускоритель AWS»).
 
 ELB не шифрует данные at rest и не кэширует контент. Кэширование — это Amazon CloudFront («облачный фронт» — сеть доставки контента); шифрование at rest («в состоянии покоя», то есть на диске) — Amazon Elastic Block Store (Amazon EBS) и Amazon Simple Storage Service (Amazon S3).
 
