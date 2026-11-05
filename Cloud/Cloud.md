@@ -1,4 +1,5 @@
 # AWS
+## AWS Certified Cloud Practitioner (CLF-C02)
 1. [[Module 1 - Introduction to the Cloud]]
 2. [[Module 2 - Compute in the Cloud (Amazon EC2)]]
 
