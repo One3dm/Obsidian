@@ -5,7 +5,9 @@
 
 **☁️ Cloud Computing (определение AWS).** **Cloud computing** — **on-demand delivery of IT resources over the internet with pay-as-you-go pricing**. 
 Четыре элемента: 
-**On-demand delivery** (доступ к ресурсам за секунды, без длительного provisioning), **IT resources** (серверы, storage, базы данных, networking, AI/ML), **Over the internet** (доступ через веб-сервисы, без локального железа), **Pay-as-you-go pricing** (оплата только за потреблённые ресурсы, без фиксированных контрактов).
+**On-demand delivery** (доступ к ресурсам за секунды, без длительного provisioning), **IT resources** (серверы, storage, базы данных, networking, AI/ML), 
+**Over the internet** (доступ через веб-сервисы, без локального железа), 
+**Pay-as-you-go pricing** (оплата только за потреблённые ресурсы, без фиксированных контрактов).
 
 **🖥️ Client-Server Model.** **Client-server model** — клиент отправляет запрос, сервер проверяет права и возвращает ответ. В AWS «сервер» — это **virtual server** (например, **Amazon Elastic Compute Cloud (Amazon EC2)**), а не физическая машина. **Permissions** — сервер проверяет легитимность запроса перед ответом.
 
