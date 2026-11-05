@@ -5,7 +5,7 @@
 [[Scripts]]
 [[NetCheatSheets]]
 [[PyNetCheatSheets]]
-
+[[Cloud]]
 ________________________________________________________________________
 Paths: -
 Tags: #Core
