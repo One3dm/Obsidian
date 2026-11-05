@@ -9,7 +9,8 @@
 **Over the internet** (доступ через веб-сервисы, без локального железа), 
 **Pay-as-you-go pricing** (оплата только за потреблённые ресурсы, без фиксированных контрактов).
 
-**🖥️ Client-Server Model.** **Client-server model** — клиент отправляет запрос, сервер проверяет права и возвращает ответ. В AWS «сервер» — это **virtual server** (например, **Amazon Elastic Compute Cloud (Amazon EC2)**), а не физическая машина. **Permissions** — сервер проверяет легитимность запроса перед ответом.
+**🖥️ Client-Server Model.** 
+**Client-server model** — клиент отправляет запрос, сервер проверяет права и возвращает ответ. В AWS «сервер» — это **virtual server** (например, **Amazon Elastic Compute Cloud (Amazon EC2)**), а не физическая машина. **Permissions** — сервер проверяет легитимность запроса перед ответом.
 
 **🏗️ Cloud Deployment Types.** 
 **Cloud-based deployment** — всё в облаке: миграция существующих ресурсов, новые приложения или комбинация. 
@@ -24,7 +25,8 @@
 **Stop spending money running and maintaining data centers** (фокус на бизнесе, а не на стойках). 
 **Go global in minutes** (развёртывание в нескольких **AWS Regions** за клики).
 
-**🌍 AWS Global Infrastructure.** **AWS Region** — физическая географическая область, содержит минимум **3 Availability Zones**. **Availability Zone (AZ)** — один или несколько **data centers** с независимыми **power**, **networking** и **connectivity**; **AZ** физически изолированы друг от друга. Рекомендуется распределять ресурсы по нескольким **AZ** для **High Availability (HA)** и **Fault Tolerance (FT)**: если одна **AZ** падает, приложение продолжает работать.
+**🌍 AWS Global Infrastructure.** 
+**AWS Region** — физическая географическая область, содержит минимум **3 Availability Zones**. **Availability Zone (AZ)** — один или несколько **data centers** с независимыми **power**, **networking** и **connectivity**; **AZ** физически изолированы друг от друга. Рекомендуется распределять ресурсы по нескольким **AZ** для **High Availability (HA)** и **Fault Tolerance (FT)**: если одна **AZ** падает, приложение продолжает работать.
 
 **🔐 AWS Shared Responsibility Model.** **AWS Shared Responsibility Model** — разделение обязанностей по безопасности между AWS и клиентом. **AWS** отвечает за **Security OF the cloud**: физическая инфраструктура, **host operating system**, **virtualization layer**, **network**, **facilities**. **Customer** отвечает за **Security IN the cloud**: данные, доступ (**AWS Identity and Access Management (IAM)**), конфигурация приложений, патчи **guest operating system** (для **Infrastructure as a Service (IaaS)**). **Shared responsibilities** зависят от сервиса. Для **Amazon EC2** клиент отвечает за **guest OS** и приложения. Для **Amazon Simple Storage Service (Amazon S3)** и **Amazon DynamoDB** AWS берёт на себя **OS** и платформу, клиент отвечает только за данные и доступ. Правило: **managed services** дают меньше ответственности клиенту, **IaaS** — больше.
 
