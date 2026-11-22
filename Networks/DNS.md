@@ -1,6 +1,6 @@
 **DNS** - Domain Name System. 
 
-![[dns.jpg]]
+ ![[dns.jpg]]
 
  **TLD** (top level domain) сервер. Домены верхнего уровня - это то что идет после последней точки _.com_, _.org_, _.ru_, _.net_. Кстати, существуют Generic Top Level Domain (**gTLD**), которые не привязаны к стране, например:  
 
